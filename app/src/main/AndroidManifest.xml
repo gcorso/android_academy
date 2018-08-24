@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.gcorso.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Explore.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Explore.SectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoBarTheme">
+        </activity>
+        <activity
+            android:name=".Explore.QuizActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoBarTheme">
+        </activity>
+        <activity
+            android:name=".ChatActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Tools.ToolsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Tools.PasswordVaultActivity"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

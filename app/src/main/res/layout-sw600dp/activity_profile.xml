@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/doughnuttot"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvlevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:text="Principiante"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral"
+                        android:textSize="40sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvprogress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:text="55/100"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral"
+                        android:textSize="30sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <com.gcorso.myapplication.Objects.FitDoughnut
+                    android:id="@+id/doughnuttot"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="50dp"
+                    app:fdColorPrimary="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/tvpercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/doughnuttot"
+                    android:layout_alignLeft="@+id/doughnuttot"
+                    android:layout_alignRight="@+id/doughnuttot"
+                    android:layout_alignTop="@+id/doughnuttot"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="75%"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral"
+                    android:textSize="45sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="casual"
+                android:text="Courses"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.gcorso.myapplication.Objects.FitDoughnut
+                            android:id="@+id/doughnut1"
+                            android:layout_width="@dimen/dounughtprof_tab"
+                            android:layout_height="@dimen/dounughtprof_tab"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            app:fdColorPrimary="@color/course1"/>
+
+                        <TextView
+                            android:id="@+id/tvpercentage1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/doughnut1"
+                            android:layout_alignLeft="@+id/doughnut1"
+                            android:layout_alignRight="@+id/doughnut1"
+                            android:layout_alignTop="@+id/doughnut1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textAlignment="center"
+                            android:textColor="@color/course1"
+                            android:textSize="@dimen/percprof_tab"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvtitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doughnut1"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="Concetti chiave"
+                            android:textAlignment="center"
+                            android:textColor="@color/course1"
+                            android:textSize="@dimen/titlprof_tab"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.gcorso.myapplication.Objects.FitDoughnut
+                            android:id="@+id/doughnut2"
+                            android:layout_width="@dimen/dounughtprof_tab"
+                            android:layout_height="@dimen/dounughtprof_tab"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            app:fdColorPrimary="@color/course2"/>
+
+                        <TextView
+                            android:id="@+id/tvpercentage2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/doughnut2"
+                            android:layout_alignLeft="@+id/doughnut2"
+                            android:layout_alignRight="@+id/doughnut2"
+                            android:layout_alignTop="@+id/doughnut2"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textAlignment="center"
+                            android:textColor="@color/course2"
+                            android:textSize="@dimen/percprof_tab"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doughnut2"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="Attacchi"
+                            android:textAlignment="center"
+                            android:textColor="@color/course2"
+                            android:textSize="@dimen/titlprof_tab"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.gcorso.myapplication.Objects.FitDoughnut
+                            android:id="@+id/doughnut3"
+                            android:layout_width="@dimen/dounughtprof_tab"
+                            android:layout_height="@dimen/dounughtprof_tab"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            app:fdColorPrimary="@color/course3"/>
+
+                        <TextView
+                            android:id="@+id/tvpercentage3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/doughnut3"
+                            android:layout_alignLeft="@+id/doughnut3"
+                            android:layout_alignRight="@+id/doughnut3"
+                            android:layout_alignTop="@+id/doughnut3"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textAlignment="center"
+                            android:textColor="@color/course3"
+                            android:textSize="@dimen/percprof_tab"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvtitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doughnut3"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="Social Networks"
+                            android:textAlignment="center"
+                            android:textColor="@color/course3"
+                            android:textSize="@dimen/titlprof_tab"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.gcorso.myapplication.Objects.FitDoughnut
+                            android:id="@+id/doughnut4"
+                            android:layout_width="@dimen/dounughtprof_tab"
+                            android:layout_height="@dimen/dounughtprof_tab"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            app:fdColorPrimary="@color/course4"/>
+
+                        <TextView
+                            android:id="@+id/tvpercentage4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/doughnut4"
+                            android:layout_alignLeft="@+id/doughnut4"
+                            android:layout_alignRight="@+id/doughnut4"
+                            android:layout_alignTop="@+id/doughnut4"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textAlignment="center"
+                            android:textColor="@color/course4"
+                            android:textSize="@dimen/percprof_tab"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvtitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doughnut4"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="Privacy"
+                            android:textAlignment="center"
+                            android:textColor="@color/course4"
+                            android:textSize="@dimen/titlprof_tab"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.gcorso.myapplication.Objects.FitDoughnut
+                            android:id="@+id/doughnut5"
+                            android:layout_width="@dimen/dounughtprof_tab"
+                            android:layout_height="@dimen/dounughtprof_tab"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            app:fdColorPrimary="@color/course5"/>
+
+                        <TextView
+                            android:id="@+id/tvpercentage5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/doughnut5"
+                            android:layout_alignLeft="@+id/doughnut5"
+                            android:layout_alignRight="@+id/doughnut5"
+                            android:layout_alignTop="@+id/doughnut5"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textAlignment="center"
+                            android:textColor="@color/course5"
+                            android:textSize="@dimen/percprof_tab"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvtitle5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doughnut5"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="Internet"
+                            android:textAlignment="center"
+                            android:textColor="@color/course5"
+                            android:textSize="@dimen/titlprof_tab"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.gcorso.myapplication.Objects.FitDoughnut
+                            android:id="@+id/doughnut6"
+                            android:layout_width="@dimen/dounughtprof_tab"
+                            android:layout_height="@dimen/dounughtprof_tab"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            app:fdColorPrimary="@color/course6"/>
+
+                        <TextView
+                            android:id="@+id/tvpercentage6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/doughnut6"
+                            android:layout_alignLeft="@+id/doughnut6"
+                            android:layout_alignRight="@+id/doughnut6"
+                            android:layout_alignTop="@+id/doughnut6"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textAlignment="center"
+                            android:textColor="@color/course6"
+                            android:textSize="@dimen/percprof_tab"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvtitle6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doughnut6"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="Sviluppatori"
+                            android:textAlignment="center"
+                            android:textColor="@color/course6"
+                            android:textSize="@dimen/titlprof_tab"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="@color/colorAccent"
+        app:menu="@menu/navigation"/>
+
+
+</RelativeLayout>

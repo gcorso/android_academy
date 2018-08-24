@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tools.ToolsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.gcorso.myapplication.Objects.SquareLayout
+                        android:id="@+id/itemvault"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/tools_rectangle">
+
+                            <ImageView
+                                android:id="@+id/tvtoolimage1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tvtoolname1"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/tools_vault"/>
+
+                            <TextView
+                                android:id="@+id/tvtoolname1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="casual"
+                                android:text="Password\nVault"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textColor="@color/neutral"
+                                android:textSize="20sp"/>
+
+
+                    </com.gcorso.myapplication.Objects.SquareLayout>
+
+                    <com.gcorso.myapplication.Objects.SquareLayout
+                        android:id="@+id/itemdata"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/tools_rectangle">
+
+
+                            <ImageView
+                                android:id="@+id/tvtoolimage2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tvtoolname2"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/tools_data_encryption"/>
+
+                            <TextView
+                                android:id="@+id/tvtoolname2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="casual"
+                                android:text="File\nEncryption"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textColor="@color/neutral"
+                                android:textSize="20sp"/>
+
+                    </com.gcorso.myapplication.Objects.SquareLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.gcorso.myapplication.Objects.SquareLayout
+                        android:id="@+id/itemantivirus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/tools_rectangle">
+
+
+                            <ImageView
+                                android:id="@+id/tvtoolimage3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tvtoolname3"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/tools_antivirus"/>
+
+                            <TextView
+                                android:id="@+id/tvtoolname3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="casual"
+                                android:text="Mobile\nAntivirus"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textColor="@color/neutral"
+                                android:textSize="20sp"/>
+
+                    </com.gcorso.myapplication.Objects.SquareLayout>
+
+                    <com.gcorso.myapplication.Objects.SquareLayout
+                        android:id="@+id/itemvpn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/tools_rectangle">
+
+
+                            <ImageView
+                                android:id="@+id/tvtoolimage4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tvtoolname4"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/tools_vpn"/>
+
+                            <TextView
+                                android:id="@+id/tvtoolname4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="casual"
+                                android:text="Mobile\nVPN"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textColor="@color/neutral"
+                                android:textSize="20sp"/>
+
+                    </com.gcorso.myapplication.Objects.SquareLayout>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="@color/colorAccent"
+        app:menu="@menu/navigation"/>
+
+
+</RelativeLayout>

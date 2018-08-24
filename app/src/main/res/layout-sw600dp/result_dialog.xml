@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvcompl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="casual"
+            android:text="Complimenti!"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#168901"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvextra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="casual"
+            android:text="La sicurezza online è importante!"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/wrong"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/lltest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvcompl"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="Score:
+7/10"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/neutral"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/tvscore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="+5\nCyberPower"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/neutral"
+                android:textSize="22sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lltest"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/doughnuttot"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tvlevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:text="Principiante"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvprogress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:text="55/100"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <com.gcorso.myapplication.Objects.FitDoughnut
+                android:id="@+id/doughnuttot"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                app:fdColorPrimary="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/tvpercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/doughnuttot"
+                android:layout_alignLeft="@+id/doughnuttot"
+                android:layout_alignRight="@+id/doughnuttot"
+                android:layout_alignTop="@+id/doughnuttot"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="75%"
+                android:textAlignment="center"
+                android:textColor="@color/neutral"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/neutral"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:weightSum="1">
+
+
+        <Button
+            android:id="@+id/btHome"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0.50"
+            android:background="@color/neutral"
+            android:elegantTextHeight="false"
+            android:text="HOME"
+            android:fontFamily="casual"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btRiprova"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0.50"
+            android:background="#ffffffff"
+            android:text="RIPROVA"
+            android:fontFamily="casual"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+            android:textColor="@color/neutral"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

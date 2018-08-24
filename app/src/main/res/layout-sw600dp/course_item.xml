@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="25dp"
+    android:paddingLeft="25dp"
+    android:paddingTop="25dp">
+
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="casual"
+        android:text="Internet"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    <android.support.v17.leanback.widget.HorizontalGridView
+        android:id="@+id/gridlessons"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/course_title"
+        android:layout_marginTop="10dp"
+
+        />
+
+
+</RelativeLayout>
