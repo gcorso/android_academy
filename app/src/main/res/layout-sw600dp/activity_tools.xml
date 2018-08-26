@@ -28,7 +28,7 @@
                     android:layout_height="match_parent">
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemvault"
+                        android:id="@+id/item1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -62,7 +62,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:fontFamily="casual"
-                                android:text="Password\nVault"
+                                android:text="Tool 1"
                                 android:textAlignment="center"
                                 android:textAppearance="@style/TextAppearance.AppCompat"
                                 android:textColor="@color/neutral"
@@ -73,7 +73,7 @@
                     </com.gcorso.myapplication.Objects.SquareLayout>
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemdata"
+                        android:id="@+id/item2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -107,7 +107,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:fontFamily="casual"
-                                android:text="File\nEncryption"
+                                android:text="Tool 2"
                                 android:textAlignment="center"
                                 android:textAppearance="@style/TextAppearance.AppCompat"
                                 android:textColor="@color/neutral"
@@ -122,7 +122,7 @@
                     android:layout_height="match_parent">
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemantivirus"
+                        android:id="@+id/item3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -156,7 +156,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:fontFamily="casual"
-                                android:text="Mobile\nAntivirus"
+                                android:text="Tool 3"
                                 android:textAlignment="center"
                                 android:textAppearance="@style/TextAppearance.AppCompat"
                                 android:textColor="@color/neutral"
@@ -166,7 +166,7 @@
                     </com.gcorso.myapplication.Objects.SquareLayout>
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemvpn"
+                        android:id="@+id/item4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -200,7 +200,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:fontFamily="casual"
-                                android:text="Mobile\nVPN"
+                                android:text="Tool 4"
                                 android:textAlignment="center"
                                 android:textAppearance="@style/TextAppearance.AppCompat"
                                 android:textColor="@color/neutral"

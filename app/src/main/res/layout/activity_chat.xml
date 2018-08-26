@@ -32,7 +32,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="casual"
-                android:text="Sezione Chat:\nQui gli utenti potranno chiedere aiuto su attacchi che hanno subito, discutere su tematiche del mondo digitale e proporre nuovi argomenti di lezioni."
+                android:text="Chat Section\nHere users will be able to ask for help and discuss topics related to your courses. This section is not developed yet, if you are interested check future updates."
                 android:textAlignment="center"
                 android:textColor="@color/neutral"
                 android:textSize="24sp"/>

@@ -20,7 +20,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="10dp"
             android:fontFamily="casual"
-            android:text="Complimenti!"
+            android:text="Well Done!"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="#168901"
@@ -96,7 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="casual"
-                    android:text="Principiante"
+                    android:text="Beginner"
                     android:textAlignment="center"
                     android:textColor="@color/neutral"
                     android:textSize="20sp"
@@ -172,13 +172,13 @@
             android:textSize="16sp"/>
 
         <Button
-            android:id="@+id/btRiprova"
+            android:id="@+id/btTryAgain"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="0.50"
             android:background="#ffffffff"
-            android:text="RIPROVA"
             android:fontFamily="casual"
+            android:text="TRY AGAIN"
             android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
             android:textColor="@color/neutral"
             android:textSize="16sp"/>

@@ -55,9 +55,6 @@ public class CoursesListAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Click course", Toast.LENGTH_SHORT).show();
-                /*Intent intent = new Intent(context, BookActivity.class);
-                intent.putExtra("bookId", courses.get(position).getBookId());
-                context.startActivity(intent);*/
             }
         });
 

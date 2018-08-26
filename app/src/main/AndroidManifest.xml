@@ -15,7 +15,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -39,10 +38,6 @@
         </activity>
         <activity
             android:name=".ProfileActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".Tools.PasswordVaultActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

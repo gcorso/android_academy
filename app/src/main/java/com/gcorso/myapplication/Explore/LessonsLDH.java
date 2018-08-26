@@ -16,7 +16,7 @@ import java.util.List;
 
 public class LessonsLDH {
 
-    public static final String[] levels = {"Esordiente", "Principiante", "Esperto", "Maestro", "Hacker"};
+    public static final String[] levels = {"Beginner", "Amateur", "Expert", "Professional", "Master"};
     public static final int[] boundaries = {0, 100, 250, 450, 700, 1500};
 
     private static final int DATABASE_VERSION = 18;
@@ -52,6 +52,27 @@ public class LessonsLDH {
         openHelper = new LessonsDBOpenHelper(context);
         SQLiteDatabase db = openHelper.getReadableDatabase();
         return db;
+    }
+
+    public List<String> getCoursesNames(){
+        openHelper.getWritableDatabase();
+        Cursor cursor = database.rawQuery(
+                "SELECT " + COURSE_COLUMN_TITLE + " FROM " + TABLE_NAME_COURSES + " ORDER BY " + COURSE_COLUMN_ID,
+                null
+        );
+
+        List<String> list = new ArrayList<>();
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()){
+            String str = cursor.getString(0);
+            list.add(str);
+            cursor.moveToNext();
+        }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+        }
+        return list;
     }
 
     public List<Course> getCourses(){
@@ -152,7 +173,6 @@ public class LessonsLDH {
         cursor.moveToFirst();
 
         for(int i = 0; i<6; i++){
-            //Log.i("query risultati", "risultati " + Integer.toString(i) + " : " + Integer.toString(cursor.getInt(0)) + " / " + cursor.getInt(1));
             perccourses[cursor.getInt(2)-1] = cursor.getInt(0) * 10 / cursor.getInt(1);
             cursor.moveToNext();
         }
@@ -176,38 +196,6 @@ public class LessonsLDH {
         }
         return 0;
     }
-
-    // returns a book item complete for the ReadingActivity
-    /*public Book getBookTextById(int id){
-        openHelper.getWritableDatabase();
-        String sql = "SELECT " + BOOK_COLUMN_ID + ", " + BOOK_COLUMN_NAME + ", " + BOOK_COLUMN_AUTHORID + " , "
-                + BOOK_COLUMN_AUTHORNAME + ", " + BOOK_COLUMN_YEAR + ", "
-                + BOOK_COLUMN_FILE + ", " + BOOK_COLUMN_PROGRESS + ", "
-                + BOOK_COLUMN_NOTES
-                + " FROM " + TABLE_NAME_BOOKS
-                + " WHERE " + BOOK_COLUMN_ID + " = " + Integer.toString(id);
-
-        Cursor cursor = database.rawQuery(sql, null);
-        cursor.moveToFirst();
-
-        Book book = new Book(cursor.getInt(0), cursor.getString(1), cursor.getInt(2),
-                cursor.getString(3), cursor.getInt(4), cursor.getString(5),
-                cursor.getInt(6), cursor.getString(7));
-
-        if (cursor != null && !cursor.isClosed()) {
-            cursor.close();
-        }
-
-        Time time = new Time();
-        time.setToNow();
-        sql = "UPDATE " + TABLE_NAME_BOOKS
-                + " SET " + BOOK_COLUMN_OPENED + " = " + Long.toString(time.toMillis(false))
-                + " WHERE " + BOOK_COLUMN_ID + " = " + Integer.toString(id);
-        database.execSQL(sql);
-
-        return book;
-    }*/
-
 
     // class that interfaces the connection between the LDH and the database
     private class LessonsDBOpenHelper extends SQLiteOpenHelper {

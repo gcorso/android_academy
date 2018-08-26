@@ -7,11 +7,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +38,6 @@ public class ToolsActivity extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.navigation_tools:
-
                     return true;
                 case R.id.navigation_profile:
                     intent = new Intent(ToolsActivity.this, ProfileActivity.class);
@@ -64,7 +60,7 @@ public class ToolsActivity extends AppCompatActivity {
                 ActionBar.LayoutParams.MATCH_PARENT,
                 Gravity.CENTER);
         TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText("Strumenti");
+        textviewTitle.setText("Tools");
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
@@ -73,64 +69,26 @@ public class ToolsActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_tools);
 
-        RelativeLayout itemData = findViewById(R.id.itemdata);
-        itemData.setOnClickListener(itemVuotoListener);
-        RelativeLayout itemAntivirus = findViewById(R.id.itemantivirus);
-        itemAntivirus.setOnClickListener(itemVuotoListener);
-        RelativeLayout itemVpn = findViewById(R.id.itemvpn);
-        itemVpn.setOnClickListener(itemVuotoListener);
-
-        RelativeLayout itemVault = findViewById(R.id.itemvault);
-        itemVault.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout item1 = findViewById(R.id.item1);
+        item1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LayoutInflater inflater = ToolsActivity.this.getLayoutInflater();
-                View dialogView = inflater.inflate(R.layout.password_dialog, null);
-                final android.app.AlertDialog dialog = new android.app.AlertDialog.Builder(ToolsActivity.this).setView(dialogView).show();
-
-                final EditText input = dialogView.findViewById(R.id.fieldpassword);
-
-                Button btOpen = dialogView.findViewById(R.id.btOpen);
-                btOpen.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        String passwordstr = input.getText().toString();
-
-                        if(passwordstr.length()>0){
-
-                            while(passwordstr.length()<16){
-                                passwordstr = passwordstr + " ";
-                            }
-                            Intent openReading = new Intent (ToolsActivity.this, PasswordVaultActivity.class);
-                            openReading.putExtra("password", passwordstr);
-                            startActivity(openReading);
-                            dialog.dismiss();
-                        }
-
-
-                    }
-                });
-                Button btCancel = dialogView.findViewById(R.id.btCancel);
-                btCancel.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.cancel();
-                    }
-                });
+                // click on item 1
             }
         });
 
-
-
-
-
+        RelativeLayout item2 = findViewById(R.id.item2);
+        item2.setOnClickListener(itemEmptyListener);
+        RelativeLayout item3 = findViewById(R.id.item3);
+        item3.setOnClickListener(itemEmptyListener);
+        RelativeLayout item4 = findViewById(R.id.item4);
+        item4.setOnClickListener(itemEmptyListener);
     }
 
-    View.OnClickListener itemVuotoListener = new View.OnClickListener() {
+    View.OnClickListener itemEmptyListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Toast.makeText(ToolsActivity.this, "Ci dispiace questa funzione non è ancora disponibile. Prova invece la password vault.", Toast.LENGTH_LONG).show();
+            Toast.makeText(ToolsActivity.this, "Sorry, this tool is not available yet.", Toast.LENGTH_LONG).show();
         }
     };
 }

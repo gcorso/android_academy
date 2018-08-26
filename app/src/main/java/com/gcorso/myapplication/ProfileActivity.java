@@ -17,7 +17,11 @@ import com.gcorso.myapplication.Objects.FitDoughnut;
 import com.gcorso.myapplication.Objects.Level;
 import com.gcorso.myapplication.Tools.ToolsActivity;
 
+import java.util.List;
+
 public class ProfileActivity extends AppCompatActivity {
+
+    public static final String SCORE_NAME = "CyberPower";
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -73,6 +77,7 @@ public class ProfileActivity extends AppCompatActivity {
         LessonsLDH lessonsLDH = new LessonsLDH(this);
         Level level = lessonsLDH.getLevel();
 
+        // set up the overall level
         FitDoughnut doughnut = (FitDoughnut) findViewById(R.id.doughnuttot);
         doughnut.animateSetPercent((float) level.getPerctot());
         TextView tvperctot = findViewById(R.id.tvpercentage);
@@ -89,10 +94,16 @@ public class ProfileActivity extends AppCompatActivity {
         TextView[] tvperccourses = new TextView[]{findViewById(R.id.tvpercentage1), findViewById(R.id.tvpercentage2), findViewById(R.id.tvpercentage3),
                 findViewById(R.id.tvpercentage4), findViewById(R.id.tvpercentage5), findViewById(R.id.tvpercentage6)};
 
-        for(int i = 0; i<6; i++){
+        // TextViews for the titles
+        List<String> coursesTitles = lessonsLDH.getCoursesNames();
+        TextView[] tvtitles = new TextView[]{findViewById(R.id.tvtitle1), findViewById(R.id.tvtitle2), findViewById(R.id.tvtitle3),
+                findViewById(R.id.tvtitle4), findViewById(R.id.tvtitle5), findViewById(R.id.tvtitle6)};
+
+        for(int i = 0; i<coursesTitles.size(); i++){
             dcourses[i].animateSetPercent((float) level.getPerccourses()[i]);
             String t = level.getPerccourses()[i] + "%";
             tvperccourses[i].setText(t);
+            tvtitles[i].setText(coursesTitles.get(i));
         }
 
 

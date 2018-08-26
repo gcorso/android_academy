@@ -28,7 +28,7 @@
                     android:layout_height="match_parent">
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemvault"
+                        android:id="@+id/item1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -47,26 +47,26 @@
                                 android:layout_marginTop="20dp"
                                 app:srcCompat="@drawable/tools_vault"/>
 
-                            <TextView
-                                android:id="@+id/tvtoolname1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="15dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:fontFamily="casual"
-                                android:text="Password\nVault"
-                                android:textAlignment="center"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textColor="@color/neutral"
-                                android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/tvtoolname1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="casual"
+                            android:text="Tool 1"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@color/neutral"
+                            android:textSize="20sp"/>
 
 
                     </com.gcorso.myapplication.Objects.SquareLayout>
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemdata"
+                        android:id="@+id/item2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -86,20 +86,20 @@
                                 android:layout_marginTop="20dp"
                                 app:srcCompat="@drawable/tools_data_encryption"/>
 
-                            <TextView
-                                android:id="@+id/tvtoolname2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="15dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:fontFamily="casual"
-                                android:text="File\nEncryption"
-                                android:textAlignment="center"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textColor="@color/neutral"
-                                android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/tvtoolname2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="casual"
+                            android:text="Tool 2"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@color/neutral"
+                            android:textSize="20sp"/>
 
                     </com.gcorso.myapplication.Objects.SquareLayout>
                 </TableRow>
@@ -109,7 +109,7 @@
                     android:layout_height="match_parent">
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemantivirus"
+                        android:id="@+id/item3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -129,25 +129,25 @@
                                 android:layout_marginTop="20dp"
                                 app:srcCompat="@drawable/tools_antivirus"/>
 
-                            <TextView
-                                android:id="@+id/tvtoolname3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="15dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:fontFamily="casual"
-                                android:text="Mobile\nAntivirus"
-                                android:textAlignment="center"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textColor="@color/neutral"
-                                android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/tvtoolname3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="casual"
+                            android:text="Tool 3"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@color/neutral"
+                            android:textSize="20sp"/>
 
                     </com.gcorso.myapplication.Objects.SquareLayout>
 
                     <com.gcorso.myapplication.Objects.SquareLayout
-                        android:id="@+id/itemvpn"
+                        android:id="@+id/item4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -167,20 +167,20 @@
                                 android:layout_marginTop="20dp"
                                 app:srcCompat="@drawable/tools_vpn"/>
 
-                            <TextView
-                                android:id="@+id/tvtoolname4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="15dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:fontFamily="casual"
-                                android:text="Mobile\nVPN"
-                                android:textAlignment="center"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textColor="@color/neutral"
-                                android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/tvtoolname4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="casual"
+                            android:text="Tool 4"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@color/neutral"
+                            android:textSize="20sp"/>
 
                     </com.gcorso.myapplication.Objects.SquareLayout>
                 </TableRow>

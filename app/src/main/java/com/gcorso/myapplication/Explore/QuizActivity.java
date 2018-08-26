@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.gcorso.myapplication.Objects.FitDoughnut;
 import com.gcorso.myapplication.Objects.Level;
+import com.gcorso.myapplication.ProfileActivity;
 import com.gcorso.myapplication.R;
 
 import java.util.ArrayList;
@@ -104,20 +105,20 @@ public class QuizActivity extends AppCompatActivity {
             TextView tvResult = dialogView.findViewById(R.id.tvresult);
 
             if(tot == 10){
-                tvCompl.setText("Perfetto!");
+                tvCompl.setText("Perfect!");
             } else if (tot>=7){
-                tvCompl.setText("Complimenti!");
+                tvCompl.setText("Well Done!");
             } else {
-                tvCompl.setText("Riprova!");
+                tvCompl.setText("Try Again!");
                 tvCompl.setTextColor(getResources().getColor(R.color.wrong));
                 TextView tvExtra = dialogView.findViewById(R.id.tvextra);
                 tvExtra.setVisibility(View.VISIBLE);
             }
 
-            String res = "Punteggio:\n" + Integer.toString(tot) + "/10";
+            String res = "Score:\n" + Integer.toString(tot) + "/10";
             tvResult.setText(res);
 
-            String change = "+" + Integer.toString(ch) + "\nCyberPower";
+            String change = "+" + Integer.toString(ch) + "\n" + ProfileActivity.SCORE_NAME;
             tvScore.setText(change);
 
             // level
@@ -133,8 +134,8 @@ public class QuizActivity extends AppCompatActivity {
             String prog = Integer.toString(level.getProg()) + " / " + Integer.toString(level.getTot());
             tvProg.setText(prog);
 
-            Button btRiprova = dialogView.findViewById(R.id.btRiprova);
-            btRiprova.setOnClickListener(new View.OnClickListener() {
+            Button btTryAgain = dialogView.findViewById(R.id.btTryAgain);
+            btTryAgain.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     dialog.dismiss();
@@ -168,11 +169,11 @@ public class QuizActivity extends AppCompatActivity {
         final int correctans;
 
         if(parts.length == 2){
-            // vero o falso
+            // true or false
             answersBt[0].setBackground(getResources().getDrawable(R.drawable.answerbox));
             answersBt[1].setBackground(getResources().getDrawable(R.drawable.answerbox));
-            answersBt[0].setText("Vero");
-            answersBt[1].setText("Falso");
+            answersBt[0].setText("True");
+            answersBt[1].setText("False");
             answersBt[2].setVisibility(View.GONE);
             answersBt[3].setVisibility(View.GONE);
 
@@ -182,7 +183,7 @@ public class QuizActivity extends AppCompatActivity {
                 correctans = 1;
             }
         } else {
-            // 4 opzioni
+            // 4 multiple choices
 
             List<Integer> list = new ArrayList<Integer>();
             list.add(0);

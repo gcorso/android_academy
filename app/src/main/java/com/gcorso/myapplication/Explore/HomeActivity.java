@@ -58,17 +58,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        /*List<Course> courses = new ArrayList<>();
-        List<Lesson> lessons = new ArrayList<>();
-
-        for(int i = 0; i < 10; i++){
-            lessons.add(new Lesson(i, "Lezione " + Integer.toString(i)));
-        }
-
-        for(int i = 0; i < 10; i++){
-            courses.add(new Course(i, "Corso " + Integer.toString(i), lessons));
-        }*/
-
         lessonsLDH = new LessonsLDH(this);
         List<Course> courses = lessonsLDH.getCourses();
 
