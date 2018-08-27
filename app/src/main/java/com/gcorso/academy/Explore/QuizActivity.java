@@ -1,4 +1,4 @@
-package com.gcorso.myapplication.Explore;
+package com.gcorso.academy.Explore;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +10,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.gcorso.myapplication.Objects.FitDoughnut;
-import com.gcorso.myapplication.Objects.Level;
-import com.gcorso.myapplication.ProfileActivity;
-import com.gcorso.myapplication.R;
+import com.gcorso.academy.Objects.FitDoughnut;
+import com.gcorso.academy.Objects.Level;
+import com.gcorso.academy.ProfileActivity;
+import com.gcorso.academy.R;
 
 import java.util.ArrayList;
 import java.util.List;

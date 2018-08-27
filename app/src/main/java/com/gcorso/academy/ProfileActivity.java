@@ -1,4 +1,4 @@
-package com.gcorso.myapplication;
+package com.gcorso.academy;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gcorso.myapplication.Explore.HomeActivity;
-import com.gcorso.myapplication.Explore.LessonsLDH;
-import com.gcorso.myapplication.Objects.FitDoughnut;
-import com.gcorso.myapplication.Objects.Level;
-import com.gcorso.myapplication.Tools.ToolsActivity;
+import com.gcorso.academy.Explore.HomeActivity;
+import com.gcorso.academy.Explore.LessonsLDH;
+import com.gcorso.academy.Objects.FitDoughnut;
+import com.gcorso.academy.Objects.Level;
+import com.gcorso.academy.Tools.ToolsActivity;
 
 import java.util.List;
 

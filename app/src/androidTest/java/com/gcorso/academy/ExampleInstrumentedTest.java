@@ -1,4 +1,4 @@
-package com.gcorso.myapplication;
+package com.gcorso.academy;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.gcorso.myapplication;
+package com.gcorso.academy;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -11,8 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gcorso.myapplication.Explore.HomeActivity;
-import com.gcorso.myapplication.Tools.ToolsActivity;
+import com.gcorso.academy.Explore.HomeActivity;
+import com.gcorso.academy.Tools.ToolsActivity;
 
 public class ChatActivity extends AppCompatActivity {
 

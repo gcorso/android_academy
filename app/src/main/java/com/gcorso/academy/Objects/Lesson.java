@@ -1,4 +1,4 @@
-package com.gcorso.myapplication.Objects;
+package com.gcorso.academy.Objects;
 
 import java.util.List;
 

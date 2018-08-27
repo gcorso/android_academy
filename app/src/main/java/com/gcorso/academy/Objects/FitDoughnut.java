@@ -1,4 +1,4 @@
-package com.gcorso.myapplication.Objects;
+package com.gcorso.academy.Objects;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 
-import com.gcorso.myapplication.R;
+import com.gcorso.academy.R;
 
 // from https://github.com/tehmantra/FitDoughnut
 

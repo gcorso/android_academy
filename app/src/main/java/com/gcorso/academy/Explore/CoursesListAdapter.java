@@ -1,4 +1,4 @@
-package com.gcorso.myapplication.Explore;
+package com.gcorso.academy.Explore;
 
 import android.content.Context;
 import android.support.v17.leanback.widget.HorizontalGridView;
@@ -9,8 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gcorso.myapplication.Objects.Course;
-import com.gcorso.myapplication.R;
+import com.gcorso.academy.Objects.Course;
+import com.gcorso.academy.R;
 
 import java.util.List;
 

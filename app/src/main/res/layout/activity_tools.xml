@@ -27,7 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.gcorso.myapplication.Objects.SquareLayout
+                    <com.gcorso.academy.Objects.SquareLayout
                         android:id="@+id/item1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -63,9 +63,9 @@
                             android:textSize="20sp"/>
 
 
-                    </com.gcorso.myapplication.Objects.SquareLayout>
+                    </com.gcorso.academy.Objects.SquareLayout>
 
-                    <com.gcorso.myapplication.Objects.SquareLayout
+                    <com.gcorso.academy.Objects.SquareLayout
                         android:id="@+id/item2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -101,14 +101,14 @@
                             android:textColor="@color/neutral"
                             android:textSize="20sp"/>
 
-                    </com.gcorso.myapplication.Objects.SquareLayout>
+                    </com.gcorso.academy.Objects.SquareLayout>
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.gcorso.myapplication.Objects.SquareLayout
+                    <com.gcorso.academy.Objects.SquareLayout
                         android:id="@+id/item3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -144,9 +144,9 @@
                             android:textColor="@color/neutral"
                             android:textSize="20sp"/>
 
-                    </com.gcorso.myapplication.Objects.SquareLayout>
+                    </com.gcorso.academy.Objects.SquareLayout>
 
-                    <com.gcorso.myapplication.Objects.SquareLayout
+                    <com.gcorso.academy.Objects.SquareLayout
                         android:id="@+id/item4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -182,7 +182,7 @@
                             android:textColor="@color/neutral"
                             android:textSize="20sp"/>
 
-                    </com.gcorso.myapplication.Objects.SquareLayout>
+                    </com.gcorso.academy.Objects.SquareLayout>
                 </TableRow>
 
             </TableLayout>
