@@ -41,9 +41,19 @@ public class LessonsLDH {
     private LessonsDBOpenHelper openHelper;
     private SQLiteDatabase database;
 
-    public LessonsLDH(Context context){
+    // in order not to have more that one instance at any time, this class is developed as a singleton
+    private static LessonsLDH instance = null;
+
+    private LessonsLDH(Context context){
         openHelper = new LessonsDBOpenHelper(context);
         database = openHelper.getReadableDatabase();
+    }
+
+    public static LessonsLDH getInstance(Context context){
+        if(instance == null){
+            instance = new LessonsLDH(context); // called just the first time the user opens the app
+        }
+        return instance;
     }
 
     public LessonsDBOpenHelper getOpenHelper (Context context){

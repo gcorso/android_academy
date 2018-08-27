@@ -44,7 +44,7 @@ public class QuizActivity extends AppCompatActivity {
         Intent intent = getIntent();
         lessonid = intent.getIntExtra("lessonid", 0);
 
-        lessonsLDH = new LessonsLDH(this);
+        lessonsLDH = LessonsLDH.getInstance(this);
         String q = lessonsLDH.getQuestion(lessonid);
         lessontitle = lessonsLDH.getLessonTitle(lessonid);
 

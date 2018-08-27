@@ -65,7 +65,7 @@ public class ProfileActivity extends AppCompatActivity {
                 ActionBar.LayoutParams.MATCH_PARENT,
                 Gravity.CENTER);
         TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText("Profilo");
+        textviewTitle.setText("Profile");
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
@@ -74,7 +74,7 @@ public class ProfileActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_profile);
 
-        LessonsLDH lessonsLDH = new LessonsLDH(this);
+        LessonsLDH lessonsLDH = LessonsLDH.getInstance(this);
         Level level = lessonsLDH.getLevel();
 
         // set up the overall level

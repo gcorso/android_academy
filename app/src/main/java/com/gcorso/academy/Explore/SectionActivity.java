@@ -30,7 +30,7 @@ public class SectionActivity extends AppCompatActivity {
         final int lessonid = intent.getIntExtra("lessonid", 0);
         final int sectionn = intent.getIntExtra("sectionn", 0);
 
-        LessonsLDH lessonsLDH = new LessonsLDH(this);
+        LessonsLDH lessonsLDH = LessonsLDH.getInstance(this);
         section = lessonsLDH.getSection(lessonid, sectionn);
 
         pageTv = findViewById(R.id.page);

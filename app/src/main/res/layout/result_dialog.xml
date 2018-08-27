@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:fontFamily="casual"
-            android:text="La sicurezza online è importante!"
+            android:text="Come on you can do better!"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/wrong"

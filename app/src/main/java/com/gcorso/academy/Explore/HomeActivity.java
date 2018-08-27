@@ -58,7 +58,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        lessonsLDH = new LessonsLDH(this);
+        lessonsLDH = LessonsLDH.getInstance(this);
         List<Course> courses = lessonsLDH.getCourses();
 
         coursesListAdapter = new CoursesListAdapter(this, courses);
@@ -75,7 +75,7 @@ public class HomeActivity extends AppCompatActivity {
                 ActionBar.LayoutParams.MATCH_PARENT,
                 Gravity.CENTER);
         TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText("Esplora");
+        textviewTitle.setText("Explore");
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
