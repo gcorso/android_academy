@@ -53,6 +53,31 @@ In order to personalize your app you should consider modifying:
 
 ### Create the lessons database
 
+The app reads the details of the courses and lessons from an SQLite database saved locally. The first time the app is opened the database is created based on the instructions given in the lessonsdb.sql that is stored in the assets folder.
+
+To create the database (you can find the example with which the .sql file is created in the project repository), you can use any software you want, I recommend  [DB Browser for SQLite](https://sqlitebrowser.org/), or even write directly SQL code in the assets .sql file. With DB Browser for SQLite open the lessons.db database in the project rep, add your courses and lessons according to the schema below and then export it by going to File -> Export -> Database to SQL file -> Select the course and lesson tables -> OK -> Save it in the project assets folder with name lessonsdb.sql.
+
+In order for the app to work automatically, you will have to keep the same tables structure and use the conventions explained in the table below.
+
+#### Table course
+
+| Field | Example | Explanation|
+| :-------------: | :-------------: | ----- |
+| \_id | 2 | Id of the course, should be autoincremented: numbers from 1 to the number of courses |
+| title | Privacy | Name of the course, it will appear in the titles |
+
+#### Table lesson
+
+| Field | Example | Explanation|
+| :-------------: | :-------------: | ----- |
+| \_id | 3 | Id of the lesson, should be autoincremented: numbers from 1 to the number of lessons|
+| courseid | 2| Id of the course this lesson belongs to, it needs to have a corresponding entry in the course table |
+| questions | GDPR | Name of the lesson, it will appear in the titles |
+| result | 9 | Number of questions the user got correct in his best attempt of the current lesson |
+| nsections | 4 | Number of sections that the current lesson is composed by |
+| section0 ... section9 | Title of the section<<-->>Text of the section | Each of the fields contains one section, title and text of the section are separated by this `<<-->>` set of characters. If the lesson is composed by three sections only the fields 0, 1, 2 should be used and the others left empty |
+| questions | Question 1<->Correct Ans<->Wrong 1<->Wrong 2<->Wrong 3<<-->>Question 2<->T<<-->> ... | Details of the 10 questions at the end of the lesson, questions are divided by `<<-->>`. Each question can either be: multiple choice (`Text Question<->Text Correct Answer<->Wrong Answer 1<->Wrong Answer 2<->Wrong Answer 3`) or true or false (`Text Question<->T or F`) |
+
 ### Personalize the levels of the profile
 
 ### Develop your tools
@@ -62,7 +87,7 @@ In order to personalize your app you should consider modifying:
 The following list contains the future extensions that we have in plan to develop:
 * chat section: a forum where users will be able to ask for help and discuss topics related to your courses;
 * integrate the possibility to display YouTube videos (in the place of photos) in the lessons;
-* save the profiles online so users can browse and see their friends progresses;
+* create a login process and save the profiles online so users can browse and see their friends progresses;
 * create a form in the app where users can directly propose new lessons that you will, then, have to approve;
 
 If you have ideas of other functionalities that you think that might be useful please write them to us and we will add them to the roadmap.
