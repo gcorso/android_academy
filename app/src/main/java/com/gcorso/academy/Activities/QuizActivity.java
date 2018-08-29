@@ -177,10 +177,10 @@ public class QuizActivity extends AppCompatActivity {
             answersBt[2].setVisibility(View.GONE);
             answersBt[3].setVisibility(View.GONE);
 
-            if(parts[1].charAt(0)== 'V'){
-                correctans = 0;
-            } else {
+            if(parts[1].charAt(0)== 'F'){
                 correctans = 1;
+            } else {
+                correctans = 0;
             }
         } else {
             // 4 multiple choices

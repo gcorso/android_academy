@@ -267,6 +267,10 @@ public class FitDoughnut extends ViewGroup {
         tailAnimator.start();
     }
 
+    public void setColorPrimary(int colorPrimary) {
+        this.colorPrimary = colorPrimary;
+        paintPrimary.setColor(colorPrimary);
+    }
 
 
     //endregion

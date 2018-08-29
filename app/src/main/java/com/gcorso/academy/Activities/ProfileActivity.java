@@ -11,12 +11,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.gcorso.academy.Explore.CoursesProgGridAdapter;
 import com.gcorso.academy.Explore.HomeActivity;
 import com.gcorso.academy.Explore.LessonsLDH;
+import com.gcorso.academy.Objects.Course;
+import com.gcorso.academy.Objects.ExpandableHeightGridView;
 import com.gcorso.academy.Objects.FitDoughnut;
 import com.gcorso.academy.Objects.Level;
 import com.gcorso.academy.Tools.ToolsActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -89,22 +93,15 @@ public class ProfileActivity extends AppCompatActivity {
         String prog = Integer.toString(level.getProg()) + " / " + Integer.toString(level.getTot());
         tvProg.setText(prog);
 
-        FitDoughnut[] dcourses = {findViewById(R.id.doughnut1), findViewById(R.id.doughnut2), findViewById(R.id.doughnut3),
-                findViewById(R.id.doughnut4), findViewById(R.id.doughnut5), findViewById(R.id.doughnut6)};
-        TextView[] tvperccourses = new TextView[]{findViewById(R.id.tvpercentage1), findViewById(R.id.tvpercentage2), findViewById(R.id.tvpercentage3),
-                findViewById(R.id.tvpercentage4), findViewById(R.id.tvpercentage5), findViewById(R.id.tvpercentage6)};
-
-        // TextViews for the titles
+        ExpandableHeightGridView gridCourses = findViewById(R.id.gridCoursesProg);
+        List<Course> courses = new ArrayList<>();
         List<String> coursesTitles = lessonsLDH.getCoursesNames();
-        TextView[] tvtitles = new TextView[]{findViewById(R.id.tvtitle1), findViewById(R.id.tvtitle2), findViewById(R.id.tvtitle3),
-                findViewById(R.id.tvtitle4), findViewById(R.id.tvtitle5), findViewById(R.id.tvtitle6)};
-
         for(int i = 0; i<coursesTitles.size(); i++){
-            dcourses[i].animateSetPercent((float) level.getPerccourses()[i]);
-            String t = level.getPerccourses()[i] + "%";
-            tvperccourses[i].setText(t);
-            tvtitles[i].setText(coursesTitles.get(i));
+            courses.add(new Course(coursesTitles.get(i), level.getPerccourses()[i]));
         }
+        CoursesProgGridAdapter coursesAdapter = new CoursesProgGridAdapter(courses);
+        gridCourses.setAdapter(coursesAdapter);
+        gridCourses.setExpanded(true);
 
 
     }
