@@ -63,20 +63,29 @@ In order for the app to work automatically, you will have to keep the same table
 
 | Field | Example | Explanation|
 | :-------------: | :-------------: | ----- |
-| \_id | 2 | Id of the course, should be autoincremented: numbers from 1 to the number of courses |
-| title | Privacy | Name of the course, it will appear in the titles |
+| \_id | `2` | Id of the course, should be autoincremented: numbers from 1 to the number of courses |
+| title | `Privacy` | Name of the course, it will appear in the titles |
 
 #### Table lesson
 
 | Field | Example | Explanation|
 | :-------------: | :-------------: | ----- |
-| \_id | 3 | Id of the lesson, should be autoincremented: numbers from 1 to the number of lessons|
-| courseid | 2| Id of the course this lesson belongs to, it needs to have a corresponding entry in the course table |
-| questions | GDPR | Name of the lesson, it will appear in the titles |
-| result | 9 | Number of questions the user got correct in his best attempt of the current lesson |
-| nsections | 4 | Number of sections that the current lesson is composed by |
-| section0 ... section9 | Title of the section<<-->>Text of the section | Each of the fields contains one section, title and text of the section are separated by this `<<-->>` set of characters. If the lesson is composed by three sections only the fields 0, 1, 2 should be used and the others left empty |
-| questions | Question 1<->Correct Ans<->Wrong 1<->Wrong 2<->Wrong 3<<-->>Question 2<->T<<-->> ... | Details of the 10 questions at the end of the lesson, questions are divided by `<<-->>`. Each question can either be: multiple choice (`Text Question<->Text Correct Answer<->Wrong Answer 1<->Wrong Answer 2<->Wrong Answer 3`) or true or false (`Text Question<->T or F`) |
+| \_id | `3` | Id of the lesson, should be autoincremented: numbers from 1 to the number of lessons|
+| courseid | `2` | Id of the course this lesson belongs to, it needs to have a corresponding entry in the course table |
+| questions | `GDPR` | Name of the lesson, it will appear in the titles |
+| result | `9` | Number of questions the user got correct in his best attempt of the current lesson |
+| nsections | `4` | Number of sections that the current lesson is composed by |
+| section0 ... section9 | `Title of the section<<-->>Text of the section` | Each of the fields contains one section, title and text of the section are separated by this `<<-->>` set of characters. If the lesson is composed by three sections only the fields 0, 1, 2 should be used and the others left empty |
+| questions | `Question 1<->Correct Ans<->Wrong 1<->Wrong 2<->Wrong 3<<-->>Question 2<->T<<-->> ...` | Details of the 10 questions at the end of the lesson, questions are divided by `<<-->>`. Each question can either be: multiple choice (`Text Question<->Text Correct Answer<->Wrong Answer 1<->Wrong Answer 2<->Wrong Answer 3`) or true or false (`Text Question<->T or F`) |
+
+#### Images
+
+As you can see from the screenshots of the template each lesson has an icon and each section a picture. These are all saved in the app drawable folder with the following conventions:
+
+ * __lessons' icons:__ named `z<id of the lesson>.png` (for example for the lesson with id 3 the path of the image should be _app\src\main\res\drawable\z3.png_). The icon should be a square white logo with a transparent background, suggested size ≈ 100x100 pixels.
+ * __section picture:__ named `s<id of the lesson><section number>.jpg` (for example for the first section of the lesson with id 3 the path of the image should be _app\src\main\res\drawable\s30.jpg_). The image should be related to the content of the section, suggested size at least 300x200 pixels.
+
+Now open your app on an Android device and all your courses should be working!
 
 ### Personalize the levels of the profile
 
