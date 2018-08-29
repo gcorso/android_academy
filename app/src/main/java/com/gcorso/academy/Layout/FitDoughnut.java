@@ -1,4 +1,4 @@
-package com.gcorso.academy.Objects;
+package com.gcorso.academy.Layout;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;

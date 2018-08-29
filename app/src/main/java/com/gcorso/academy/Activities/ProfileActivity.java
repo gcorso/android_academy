@@ -1,4 +1,4 @@
-package com.gcorso.academy;
+package com.gcorso.academy.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,14 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gcorso.academy.Explore.CoursesProgGridAdapter;
-import com.gcorso.academy.Explore.HomeActivity;
-import com.gcorso.academy.Explore.LessonsLDH;
+import com.gcorso.academy.Adapters.CoursesProgGridAdapter;
+import com.gcorso.academy.LessonsLDH;
 import com.gcorso.academy.Objects.Course;
-import com.gcorso.academy.Objects.ExpandableHeightGridView;
-import com.gcorso.academy.Objects.FitDoughnut;
+import com.gcorso.academy.Layout.ExpandableHeightGridView;
+import com.gcorso.academy.Layout.FitDoughnut;
 import com.gcorso.academy.Objects.Level;
-import com.gcorso.academy.Tools.ToolsActivity;
+import com.gcorso.academy.R;
 
 import java.util.ArrayList;
 import java.util.List;

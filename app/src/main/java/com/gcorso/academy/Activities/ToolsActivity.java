@@ -1,4 +1,4 @@
-package com.gcorso.academy.Tools;
+package com.gcorso.academy.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +13,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gcorso.academy.ChatActivity;
-import com.gcorso.academy.Explore.HomeActivity;
-import com.gcorso.academy.ProfileActivity;
 import com.gcorso.academy.R;
 
 public class ToolsActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.gcorso.academy.Explore;
+package com.gcorso.academy.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gcorso.academy.Objects.FitDoughnut;
+import com.gcorso.academy.Activities.SectionActivity;
+import com.gcorso.academy.Layout.FitDoughnut;
 import com.gcorso.academy.Objects.Lesson;
 import com.gcorso.academy.R;
 

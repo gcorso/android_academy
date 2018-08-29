@@ -1,4 +1,4 @@
-package com.gcorso.academy.Explore;
+package com.gcorso.academy.Adapters;
 
 import android.content.Context;
 import android.support.v17.leanback.widget.HorizontalGridView;

@@ -1,4 +1,4 @@
-package com.gcorso.academy.Explore;
+package com.gcorso.academy;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -16,11 +16,13 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.gcorso.academy.Preferences.BOUNDARIES;
+import static com.gcorso.academy.Preferences.LEVELS;
+
 
 public class LessonsLDH {
 
-    public static final String[] levels = {"Beginner", "Amateur", "Expert", "Professional", "Master"};
-    public static final int[] boundaries = {0, 100, 250, 450, 700, 1500};
+
 
     private static final int DATABASE_VERSION = 7;
     private static final String DATABASE_NAME = "lessons.db";
@@ -159,21 +161,27 @@ public class LessonsLDH {
     }
 
     public Level getLevel(){
-        String sql = "SELECT SUM(result) FROM lesson";
+        String sql = "SELECT SUM(result), COUNT(nsections) FROM lesson";
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
         int totq = cursor.getInt(0) * 5;
+        int total_points = cursor.getInt(1) * 50;
         cursor.close();
         int liv = 0;
-        for(int i = 4; i>=0; i--){
-            if(totq>=boundaries[i]){
+        for(int i = LEVELS.length-1; i>=0; i--){
+            if(totq>= BOUNDARIES[i]){
                 liv = i;
                 break;
             }
         }
 
-        int prog = totq-boundaries[liv];
-        int tot = boundaries[liv+1] - boundaries[liv];
+        int prog = totq- BOUNDARIES[liv];
+        int tot;
+        if(liv == LEVELS.length-1){
+            tot = total_points;
+        } else {
+            tot = BOUNDARIES[liv+1] - BOUNDARIES[liv];
+        }
         int perc = prog*100/tot;
         int[] perccourses = {0,0,0,0,0,0};
         String sql2 = "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 1 UNION " +
@@ -191,7 +199,7 @@ public class LessonsLDH {
         }
         cursor.close();
 
-        return new Level(perc, levels[liv], prog, tot, perccourses);
+        return new Level(perc, LEVELS[liv], prog, tot, perccourses);
     }
 
     public int updateResult(int lessonid, int nuovo){

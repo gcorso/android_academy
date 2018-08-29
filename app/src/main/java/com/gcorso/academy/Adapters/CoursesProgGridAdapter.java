@@ -1,4 +1,4 @@
-package com.gcorso.academy.Explore;
+package com.gcorso.academy.Adapters;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.gcorso.academy.Objects.Course;
-import com.gcorso.academy.Objects.FitDoughnut;
+import com.gcorso.academy.Layout.FitDoughnut;
 import com.gcorso.academy.R;
 
 import java.util.List;

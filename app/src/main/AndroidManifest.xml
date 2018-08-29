@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Explore.HomeActivity"
+            android:name=".Activities.HomeActivity"
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -19,25 +19,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Explore.SectionActivity"
+            android:name=".Activities.SectionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoBarTheme">
         </activity>
         <activity
-            android:name=".Explore.QuizActivity"
+            android:name=".Activities.QuizActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoBarTheme">
         </activity>
         <activity
-            android:name=".ChatActivity"
+            android:name=".Activities.ChatActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".Tools.ToolsActivity"
+            android:name=".Activities.ToolsActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ProfileActivity"
+            android:name=".Activities.ProfileActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

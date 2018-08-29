@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="1"
+    android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+    <com.gcorso.academy.Layout.FitDoughnut
+        android:id="@+id/doughnut"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:fdColorPrimary="@color/course1"/>
+
+    <TextView
+        android:id="@+id/tvpercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/doughnut"
+        android:layout_alignLeft="@+id/doughnut"
+        android:layout_alignRight="@+id/doughnut"
+        android:layout_alignTop="@+id/doughnut"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="75%"
+        android:textAlignment="center"
+        android:textColor="@color/course1"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doughnut"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="Course 1"
+        android:textAlignment="center"
+        android:textColor="@color/course1"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

@@ -6,6 +6,7 @@ public class Course {
     private int courseid;
     private String title;
     private List<Lesson> lessons;
+    private int percentageProgress;
 
     public Course(int courseid, String title) {
         this.courseid = courseid;
@@ -16,6 +17,11 @@ public class Course {
         this.courseid = courseid;
         this.title = title;
         this.lessons = lessons;
+    }
+
+    public Course(String title, int percentageProgress) {
+        this.title = title;
+        this.percentageProgress = percentageProgress;
     }
 
     public int getCourseid() {
@@ -42,4 +48,11 @@ public class Course {
         this.lessons = lessons;
     }
 
+    public int getPercentageProgress() {
+        return percentageProgress;
+    }
+
+    public void setPercentageProgress(int percentageProgress) {
+        this.percentageProgress = percentageProgress;
+    }
 }

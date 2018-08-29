@@ -1,4 +1,4 @@
-package com.gcorso.academy.Explore;
+package com.gcorso.academy.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +12,10 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.gcorso.academy.ChatActivity;
+import com.gcorso.academy.Adapters.CoursesListAdapter;
+import com.gcorso.academy.LessonsLDH;
 import com.gcorso.academy.Objects.Course;
-import com.gcorso.academy.ProfileActivity;
 import com.gcorso.academy.R;
-import com.gcorso.academy.Tools.ToolsActivity;
 
 import java.util.List;
 
