@@ -1,6 +1,8 @@
 # Android Academy 
 
-Android educational app template, use it and you will only need to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project that is composed by layout files, activities control and database integration everything already set up for you so that you can get a headstart to get your idea to life. The template can be used freely as a whole or in part, if you do use it, we would be delighted to know it and add the link to your app in the list below. Moreover, if you extend the functionalities and you think that other educational projects would benefit, please do share it here and we will add it to the project. 
+Android educational app template, use it and you will only need to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project that is composed by layout files, activities control and database integration everything already set up for you so that you can get a headstart to get your idea to life. 
+
+The template can be used freely as a whole or in part, if you do use it, we would be delighted to know it and add the link to your app in the list below. Moreover, if you extend the functionalities and you think that other educational projects would benefit, please do share it here and we will add it to the project. 
 
 ## Table of Contents 
 
@@ -85,9 +87,15 @@ As you can see from the screenshots of the template each lesson has an icon and 
  * __lessons' icons:__ named `z<id of the lesson>.png` (for example for the lesson with id 3 the path of the image should be _app\src\main\res\drawable\z3.png_). The icon should be a square white logo with a transparent background, suggested size ≈ 100x100 pixels.
  * __section picture:__ named `s<id of the lesson><section number>.jpg` (for example for the first section of the lesson with id 3 the path of the image should be _app\src\main\res\drawable\s30.jpg_). The image should be related to the content of the section, suggested size at least 300x200 pixels.
 
+The color of each course can be changed in the `CoursesColors` array in the Preferences.java file.
+
 Now open your app on an Android device and all your courses should be working!
 
 ### Personalize the levels of the profile
+
+The default division of the levels is beginner, amateur (from 100 points), expert (from 250), professional (from 450) and master (from 700). The points are calculated based on the end of lesson test results, for each of these the best score (number of questions correct) is multiplied by 5 and summed altogether.
+
+The number, names and bounds of the levels can be changed in the Preferences.java file, where they are determined by two constant arrays: `LEVELS` defines the names and `BOUNDARIES` defines the score at which the user reaches that level. It is important that the arrays have the same size and that the score array is in ascending order (i.e. from the first to the last level).
 
 ### Develop your tools
 
@@ -110,4 +118,4 @@ Here you can have a look at some of the apps that have used this template and ho
 
 ### Contact
 
-If you have any question or you would like to contribute to the project, please contact us by using GitHub services or emailing us at _gabri.corso@gmail.com_.
+If you have any question or you would like to contribute to the project, please contact me using GitHub services or [Linkedin](https://www.linkedin.com/in/gabriele-corso-5b87b3136/) messages.
