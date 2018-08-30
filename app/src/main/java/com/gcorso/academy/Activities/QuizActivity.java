@@ -1,3 +1,10 @@
+/*
+ *  Copyright (c) 2018 Gabriele Corso
+ *
+ *  Distributed under the MIT software license, see the accompanying
+ *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+ */
+
 package com.gcorso.academy.Activities;
 
 import android.content.Intent;
@@ -13,6 +20,7 @@ import android.widget.TextView;
 import com.gcorso.academy.LessonsLDH;
 import com.gcorso.academy.Layout.FitDoughnut;
 import com.gcorso.academy.Objects.Level;
+import com.gcorso.academy.Preferences;
 import com.gcorso.academy.R;
 
 import java.util.ArrayList;
@@ -118,7 +126,7 @@ public class QuizActivity extends AppCompatActivity {
             String res = "Score:\n" + Integer.toString(tot) + "/10";
             tvResult.setText(res);
 
-            String change = "+" + Integer.toString(ch) + "\n" + ProfileActivity.SCORE_NAME;
+            String change = "+" + Integer.toString(ch) + "\n" + Preferences.SCORE_NAME;
             tvScore.setText(change);
 
             // level

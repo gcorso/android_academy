@@ -1,3 +1,10 @@
+/*
+ *  Copyright (c) 2018 Gabriele Corso
+ *
+ *  Distributed under the MIT software license, see the accompanying
+ *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+*/
+
 package com.gcorso.academy;
 
 import android.content.Context;
@@ -5,6 +12,7 @@ import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.gcorso.academy.Objects.Course;
 import com.gcorso.academy.Objects.Lesson;
@@ -19,15 +27,13 @@ import java.util.List;
 import static com.gcorso.academy.Preferences.BOUNDARIES;
 import static com.gcorso.academy.Preferences.LEVELS;
 
-
 public class LessonsLDH {
 
-
-
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 10;
     private static final String DATABASE_NAME = "lessons.db";
     private static final String TABLE_NAME_LESSONS = "lesson";
     private static final String TABLE_NAME_COURSES = "course";
+    private static final String SQL_CHECK = "SELECT count(*) FROM sqlite_master WHERE type = 'table' AND name != 'android_metadata' AND name != 'sqlite_sequence';";
 
     private static final String LESSON_COLUMN_ID = "_id";
     private static final String LESSON_COLUMN_TITLE = "title";
@@ -49,6 +55,16 @@ public class LessonsLDH {
     private LessonsLDH(Context context){
         openHelper = new LessonsDBOpenHelper(context);
         database = openHelper.getReadableDatabase();
+
+        Cursor cursor = database.rawQuery(SQL_CHECK, null);
+        cursor.moveToFirst();
+        int tables = cursor.getInt(0);
+        cursor.close();
+
+        if(tables < 2){
+            Log.w("Database","Populating database");
+            populateDatabase(context);
+        }
     }
 
     public static LessonsLDH getInstance(Context context){
@@ -57,6 +73,33 @@ public class LessonsLDH {
         }
         return instance;
     }
+
+    private void populateDatabase(Context context){
+        AssetManager assetManager = context.getAssets();
+
+        InputStream input;
+        try {
+            input = assetManager.open("lessonsdb.sql");
+
+            int size = input.available();
+            byte[] buffer = new byte[size];
+            input.read(buffer);
+            input.close();
+            String SQL_CREATE_TABLE_BOOK = new String(buffer);
+
+            String commands[] = SQL_CREATE_TABLE_BOOK.split(";");
+
+            for(String cmd : commands){
+                if(cmd.length()>4 && (!(cmd.toLowerCase().contains("commit") && cmd.length() < 15))
+                        && (!(cmd.toLowerCase().contains("begin transaction") && cmd.length() < 30))){
+                    database.execSQL(cmd);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public LessonsDBOpenHelper getOpenHelper (Context context){
         openHelper = new LessonsDBOpenHelper(context);
@@ -221,39 +264,13 @@ public class LessonsLDH {
     // class that interfaces the connection between the LDH and the database
     private class LessonsDBOpenHelper extends SQLiteOpenHelper {
 
-        Context context;
-
         public LessonsDBOpenHelper(Context context) {
           super(context, DATABASE_NAME, null, DATABASE_VERSION);
-          this.context = context;
         }
 
         @Override
         public void onCreate(SQLiteDatabase db) {
 
-            AssetManager assetManager = context.getAssets();
-
-            InputStream input;
-            try {
-                input = assetManager.open("lessonsdb.sql");
-
-                int size = input.available();
-                byte[] buffer = new byte[size];
-                input.read(buffer);
-                input.close();
-                String SQL_CREATE_TABLE_BOOK = new String(buffer);
-
-                String commands[] = SQL_CREATE_TABLE_BOOK.split(";");
-
-                for(String cmd : commands){
-                    if(cmd.length()>4 && (!cmd.toLowerCase().contains("commit"))){
-                        System.out.println(cmd);
-                        db.execSQL(cmd);
-                    }
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
 
         @Override

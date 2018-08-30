@@ -1,3 +1,10 @@
+/*
+ *  Copyright (c) 2018 Gabriele Corso
+ *
+ *  Distributed under the MIT software license, see the accompanying
+ *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+ */
+
 package com.gcorso.academy.Adapters;
 
 import android.graphics.Color;
@@ -14,10 +21,6 @@ import com.gcorso.academy.R;
 import java.util.List;
 
 import static com.gcorso.academy.Preferences.CoursesColors;
-
-/**
- *
- */
 
 public class CoursesProgGridAdapter extends BaseAdapter {
 
