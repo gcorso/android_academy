@@ -25,7 +25,7 @@ The chat section will host an ad-hoc forum where users will be able to ask for h
 
 ### Tools 
 
-In the tools section, you will be able to offer the user useful tools related to the contents of your courses. If you prefer this section can be easily removed, however, we strongly suggest not to because it is a good incentive for users that have completed all the currently available courses to keep the app.
+In the tools section, you will be able to offer the user useful tools related to the contents of your courses. If you prefer this section can be easily removed, however, we strongly suggest not to because it is a good incentive for users that have completed all the currently available courses to keep the app. For the future, we have planned to create a collection of shared tools that developers will be able to automatically add to their project, see the [future extensions](#future-extensions) section for further details.
 _For examples and ideas on what kind of tools you could offer, see the apps in the [apps section](#apps)._
 
 ### Profile
@@ -99,6 +99,12 @@ The number, names and bounds of the levels can be changed in the Preferences.jav
 
 ### Develop your tools
 
+This is the only part of the app you will have to develop yourself, if you prefer this section can be easily removed, however, we strongly suggest not to because it is a good incentive for users that have completed all the currently available courses to keep the app. For the future, we have planned to create a collection of shared tools that developers will be able to automatically add to their project.
+
+Tools are accessed from a table present in the ToolsActivity and can be developed as an independent set of activities or even just a dialog that is opened in the Tools Activity. 
+
+For examples on how you can develop a tool, see the apps in the [apps section](#apps).
+
 ## Future Extensions 
 
 The following list contains the future extensions that we have in plan to develop:
@@ -106,15 +112,17 @@ The following list contains the future extensions that we have in plan to develo
 * integrate the possibility to display YouTube videos (in the place of photos) in the lessons;
 * create a login process and save the profiles online so users can browse and see their friends progresses;
 * create a form in the app where users can directly propose new lessons that you will, then, have to approve;
+* create a collection of tools that developers can automatically add to their app, examples might be a calculator, an interactive periodic table or a password vault;
 
-If you have ideas of other functionalities that you think that might be useful please write them to us and we will add them to the roadmap.
+If you have ideas of other functionalities or tools that you think that might be useful please write them to us and we will add them to the roadmap.
 
-If you have the chance to develop a functionality not yet present in the template, please do share it with us and we will add it giving you the credits.
+If you have the chance to develop a functionality or tool not yet present in the template, please do share it with us and we will add it giving you the credits.
 
 ## Apps 
 
 Here you can have a look at some of the apps that have used this template and hopefully soon there will be yours too: 
 
+* __Cyber Academy:__ 
 
 ### Contact
 
