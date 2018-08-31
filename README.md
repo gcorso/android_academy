@@ -134,7 +134,19 @@ If you have the chance to develop a functionality or tool not yet present in the
 
 Here you can have a look at some of the apps that have used this template and hopefully soon there will be yours too: 
 
-* __Cyber Academy:__ 
+<p align="right">
+  <a href="https://x.x/">
+    <img src="images/google_play.png" align="right" height="50">
+  </a>
+</p>
+
+<p align="right">
+  <a href="https://https://github.com/gcorso/cyber_academy/">
+    <img src="images/github.PNG" align="right" height="50">
+  </a>
+</p>
+
+* __Cyber Academy:__ become an expert in cybersecurity with interactive lessons and quizzes! The app also offers tools such as a password manager to keep all your passwords safely in one place.
 
 ### Contact
 
