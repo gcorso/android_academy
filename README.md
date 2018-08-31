@@ -1,6 +1,10 @@
 # Android Academy 
 
-Android educational app template, use it and you will only need to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project that is composed by layout files, activities control and database integration everything already set up for you so that you can get a headstart to get your idea to life. 
+Android Academy is a template for an Android educational app, use it and you will only need to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project and includes by layout files, activities control and database integration, everything already set up for you so that you can get a headstart to bring your project to life. 
+
+<p align="center">
+  <img width="900"  src="https://github.com/gcorso/android_academy/blob/master/images/show1.jpg">
+</p>
 
 The template can be used freely as a whole or in part, if you do use it, we would be delighted to know it and add the link to your app in the list below. Moreover, if you extend the functionalities and you think that other educational projects would benefit, please do share it here and we will add it to the project. 
 
@@ -55,7 +59,7 @@ In order to personalize your app you should consider modifying:
 
 ### Create the lessons database
 
-The app reads the details of the courses and lessons from an SQLite database saved locally. The first time the app is opened the database is created based on the instructions given in the lessonsdb.sql that is stored in the assets folder.
+The app reads the details of the courses and lessons from an SQLite database saved locally. The first time the app is opened the database is created based on the instructions given in the lessonsdb.sql file that is stored in the assets folder.
 
 To create the database (you can find the example with which the .sql file is created in the project repository), you can use any software you want, I recommend  [DB Browser for SQLite](https://sqlitebrowser.org/), or even write directly SQL code in the assets .sql file. With DB Browser for SQLite open the lessons.db database in the project rep, add your courses and lessons according to the schema below and then export it by going to File -> Export -> Database to SQL file -> Select the course and lesson tables -> OK -> Save it in the project assets folder with name lessonsdb.sql.
 
@@ -82,6 +86,9 @@ In order for the app to work automatically, you will have to keep the same table
 
 #### Images
 
+<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_section.png">
+<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_explore.png">
+
 As you can see from the screenshots of the template each lesson has an icon and each section a picture. These are all saved in the app drawable folder with the following conventions:
 
  * __lessons' icons:__ named `z<id of the lesson>.png` (for example for the lesson with id 3 the path of the image should be _app\src\main\res\drawable\z3.png_). The icon should be a square white logo with a transparent background, suggested size ≈ 100x100 pixels.
@@ -91,13 +98,18 @@ The color of each course can be changed in the `CoursesColors` array in the Pref
 
 Now open your app on an Android device and all your courses should be working!
 
+<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_profile.png">
+
 ### Personalize the levels of the profile
 
 The default division of the levels is beginner, amateur (from 100 points), expert (from 250), professional (from 450) and master (from 700). The points are calculated based on the end of lesson test results, for each of these the best score (number of questions correct) is multiplied by 5 and summed altogether.
 
 The number, names and bounds of the levels can be changed in the Preferences.java file, where they are determined by two constant arrays: `LEVELS` defines the names and `BOUNDARIES` defines the score at which the user reaches that level. It is important that the arrays have the same size and that the score array is in ascending order (i.e. from the first to the last level).
 
+
 ### Develop your tools
+
+<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_tools.png">
 
 This is the only part of the app you will have to develop yourself, if you prefer this section can be easily removed, however, we strongly suggest not to because it is a good incentive for users that have completed all the currently available courses to keep the app. For the future, we have planned to create a collection of shared tools that developers will be able to automatically add to their project.
 
