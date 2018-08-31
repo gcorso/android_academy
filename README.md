@@ -141,7 +141,7 @@ Here you can have a look at some of the apps that have used this template and ho
 </p>
 
 <p align="right">
-  <a href="https://https://github.com/gcorso/cyber_academy/">
+  <a href="https://github.com/gcorso/cyber_academy/">
     <img src="images/github.PNG" align="right" height="50">
   </a>
 </p>
