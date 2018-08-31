@@ -1,6 +1,6 @@
 # Android Academy 
 
-Android educational app template, use it and you will only need to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project and includes by layout files, activities control and database integration, everything already set up for you so that you can get a headstart to bring your project to life. 
+Android Academy is a template for an Android educational app, use it and you will only need to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project and includes by layout files, activities control and database integration, everything already set up for you so that you can get a headstart to bring your project to life. 
 
 <p align="center">
   <img width="900"  src="https://github.com/gcorso/android_academy/blob/master/images/show1.jpg">
@@ -59,7 +59,7 @@ In order to personalize your app you should consider modifying:
 
 ### Create the lessons database
 
-The app reads the details of the courses and lessons from an SQLite database saved locally. The first time the app is opened the database is created based on the instructions given in the lessonsdb.sql that is stored in the assets folder.
+The app reads the details of the courses and lessons from an SQLite database saved locally. The first time the app is opened the database is created based on the instructions given in the lessonsdb.sql file that is stored in the assets folder.
 
 To create the database (you can find the example with which the .sql file is created in the project repository), you can use any software you want, I recommend  [DB Browser for SQLite](https://sqlitebrowser.org/), or even write directly SQL code in the assets .sql file. With DB Browser for SQLite open the lessons.db database in the project rep, add your courses and lessons according to the schema below and then export it by going to File -> Export -> Database to SQL file -> Select the course and lesson tables -> OK -> Save it in the project assets folder with name lessonsdb.sql.
 
