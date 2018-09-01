@@ -1,12 +1,12 @@
 # Android Academy 
 
-Android Academy is a template for an Android educational app, use it and you will only need to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project and includes by layout files, activities control and database integration, everything already set up for you so that you can get a headstart to bring your project to life. 
+Android Academy is a template for an Android educational app, it allows you to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project and includes layout files, activities control and database integration, everything already set up for you so that you can get a headstart to bring your project to life. 
 
 <p align="center">
   <img width="900"  src="https://github.com/gcorso/android_academy/blob/master/images/show1.jpg">
 </p>
 
-The template can be used freely as a whole or in part, if you do use it, we would be delighted to know it and add the link to your app in the list below. Moreover, if you extend the functionalities and you think that other educational projects would benefit, please do share it here and we will add it to the project. 
+The template can be used freely as a whole or in part, if you do use it, we would be delighted to know it and add the link to your app in the list below. Moreover, if you extend the functionalities and you think that other educational projects would benefit, please do share them with us and we will add them to the project. 
 
 ## Table of Contents 
 
@@ -34,7 +34,7 @@ _For examples and ideas on what kind of tools you could offer, see the apps in t
 
 ### Profile
 
-In the profile section, the user is able to see his progress in each course and his overall level. The progress of each course is calculated based on the results of the tests of the lessons in the course. Instead, you should decide the overall level division and calculation; the default one is composed by 4 levels (beginner, amateur, expert, professional) and supposes the presence of about 20 lessons. 
+In the profile section, the user is able to track his progress in each course and his overall level. The progress of each course is calculated based on the results of the tests of the lessons in the course. Instead, you should decide the overall level division and calculation; the default one is composed by 5 levels (beginner, amateur, expert, professional and master) and supposes the presence of about 20 lessons. 
 
 ## Getting Started 
 
@@ -96,9 +96,10 @@ As you can see from the screenshots of the template each lesson has an icon and 
 
 The color of each course can be changed in the `CoursesColors` array in the Preferences.java file.
 
+<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_profile.png">
+
 Now open your app on an Android device and all your courses should be working!
 
-<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_profile.png">
 
 ### Personalize the levels of the profile
 
@@ -107,9 +108,9 @@ The default division of the levels is beginner, amateur (from 100 points), exper
 The number, names and bounds of the levels can be changed in the Preferences.java file, where they are determined by two constant arrays: `LEVELS` defines the names and `BOUNDARIES` defines the score at which the user reaches that level. It is important that the arrays have the same size and that the score array is in ascending order (i.e. from the first to the last level).
 
 
-### Develop your tools
-
 <img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_tools.png">
+
+### Develop your tools
 
 This is the only part of the app you will have to develop yourself, if you prefer this section can be easily removed, however, we strongly suggest not to because it is a good incentive for users that have completed all the currently available courses to keep the app. For the future, we have planned to create a collection of shared tools that developers will be able to automatically add to their project.
 
