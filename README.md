@@ -135,7 +135,7 @@ If you have the chance to develop a functionality or tool not yet present in the
 Here you can have a look at some of the apps that have used this template and hopefully soon there will be yours too: 
 
 <p align="right">
-  <a href="https://x.x/">
+  <a href="https://play.google.com/store/apps/details?id=com.gcorso.cyberacademy">
     <img src="images/google_play.png" align="right" height="50">
   </a>
 </p>
