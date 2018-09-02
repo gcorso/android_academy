@@ -14,10 +14,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.gcorso.academy.Objects.Course;
-import com.gcorso.academy.Objects.Lesson;
-import com.gcorso.academy.Objects.Level;
-import com.gcorso.academy.Objects.Section;
+import com.gcorso.academy.objects.Course;
+import com.gcorso.academy.objects.Lesson;
+import com.gcorso.academy.objects.Level;
+import com.gcorso.academy.objects.Section;
 
 import java.io.IOException;
 import java.io.InputStream;

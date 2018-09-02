@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ProfileActivity">
+    tools:context=".activities.ProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
 
                 </LinearLayout>
 
-                <com.gcorso.academy.Layout.FitDoughnut
+                <com.gcorso.academy.layout.FitDoughnut
                     android:id="@+id/doughnuttot"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
@@ -110,7 +110,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <com.gcorso.academy.Layout.FitDoughnut
+                        <com.gcorso.academy.layout.FitDoughnut
                             android:id="@+id/doughnut1"
                             android:layout_width="@dimen/dounughtprof_tab"
                             android:layout_height="@dimen/dounughtprof_tab"
@@ -159,7 +159,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <com.gcorso.academy.Layout.FitDoughnut
+                        <com.gcorso.academy.layout.FitDoughnut
                             android:id="@+id/doughnut2"
                             android:layout_width="@dimen/dounughtprof_tab"
                             android:layout_height="@dimen/dounughtprof_tab"
@@ -215,7 +215,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <com.gcorso.academy.Layout.FitDoughnut
+                        <com.gcorso.academy.layout.FitDoughnut
                             android:id="@+id/doughnut3"
                             android:layout_width="@dimen/dounughtprof_tab"
                             android:layout_height="@dimen/dounughtprof_tab"
@@ -264,7 +264,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <com.gcorso.academy.Layout.FitDoughnut
+                        <com.gcorso.academy.layout.FitDoughnut
                             android:id="@+id/doughnut4"
                             android:layout_width="@dimen/dounughtprof_tab"
                             android:layout_height="@dimen/dounughtprof_tab"
@@ -318,7 +318,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <com.gcorso.academy.Layout.FitDoughnut
+                        <com.gcorso.academy.layout.FitDoughnut
                             android:id="@+id/doughnut5"
                             android:layout_width="@dimen/dounughtprof_tab"
                             android:layout_height="@dimen/dounughtprof_tab"
@@ -367,7 +367,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <com.gcorso.academy.Layout.FitDoughnut
+                        <com.gcorso.academy.layout.FitDoughnut
                             android:id="@+id/doughnut6"
                             android:layout_width="@dimen/dounughtprof_tab"
                             android:layout_height="@dimen/dounughtprof_tab"

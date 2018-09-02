@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ToolsActivity">
+    tools:context=".activities.ToolsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.gcorso.academy.Layout.SquareLayout
+                    <com.gcorso.academy.layout.SquareLayout
                         android:id="@+id/item1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -70,9 +70,9 @@
 
                         </LinearLayout>
 
-                    </com.gcorso.academy.Layout.SquareLayout>
+                    </com.gcorso.academy.layout.SquareLayout>
 
-                    <com.gcorso.academy.Layout.SquareLayout
+                    <com.gcorso.academy.layout.SquareLayout
                         android:id="@+id/item2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -114,14 +114,14 @@
                                 android:textSize="@dimen/toolstitle_tab"/>
                         </LinearLayout>
 
-                    </com.gcorso.academy.Layout.SquareLayout>
+                    </com.gcorso.academy.layout.SquareLayout>
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.gcorso.academy.Layout.SquareLayout
+                    <com.gcorso.academy.layout.SquareLayout
                         android:id="@+id/item3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -163,9 +163,9 @@
                                 android:textSize="@dimen/toolstitle_tab"/>
                         </LinearLayout>
 
-                    </com.gcorso.academy.Layout.SquareLayout>
+                    </com.gcorso.academy.layout.SquareLayout>
 
-                    <com.gcorso.academy.Layout.SquareLayout
+                    <com.gcorso.academy.layout.SquareLayout
                         android:id="@+id/item4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -207,7 +207,7 @@
                                 android:textSize="@dimen/toolstitle_tab"/>
                         </LinearLayout>
 
-                    </com.gcorso.academy.Layout.SquareLayout>
+                    </com.gcorso.academy.layout.SquareLayout>
                 </TableRow>
 
             </TableLayout>

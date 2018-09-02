@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.SectionActivity">
+    tools:context=".activities.SectionActivity">
 
     <TextView
         android:id="@+id/page"
@@ -71,7 +71,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textSize="30sp"/>
 
-            <com.gcorso.academy.Layout.AspectRatioImageView
+            <com.gcorso.academy.layout.AspectRatioImageView
                 android:id="@+id/sectionimage"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"

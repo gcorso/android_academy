@@ -1,4 +1,6 @@
+*.swp
 *.iml
+*.class
 .gradle
 /local.properties
 /.idea/libraries

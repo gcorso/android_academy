@@ -115,7 +115,7 @@
 
             </LinearLayout>
 
-            <com.gcorso.academy.Layout.FitDoughnut
+            <com.gcorso.academy.layout.FitDoughnut
                 android:id="@+id/doughnuttot"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
