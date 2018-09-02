@@ -2,6 +2,8 @@
 
 Android Academy is a template for an Android educational app, it allows you to focus on the contents of your courses in order to quickly launch your app idea. The repository is a boilerplate of an Android Studio project and includes layout files, activities control and database integration, everything already set up for you so that you can get a headstart to bring your project to life. 
 
+The goal of this project is to provide a tool for educators to create their learning platform without spending a lot of time and resources on them and without having to have a great knowledge of Android development.
+
 <p align="center">
   <img width="900"  src="https://github.com/gcorso/android_academy/blob/master/images/show1.jpg">
 </p>
