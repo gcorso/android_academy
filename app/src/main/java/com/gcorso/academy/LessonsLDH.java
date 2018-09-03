@@ -29,7 +29,7 @@ import static com.gcorso.academy.Preferences.LEVELS;
 
 public class LessonsLDH {
 
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 11;
     private static final String DATABASE_NAME = "lessons.db";
     private static final String TABLE_NAME_LESSONS = "lesson";
     private static final String TABLE_NAME_COURSES = "course";
@@ -145,7 +145,7 @@ public class LessonsLDH {
         while (!cursor.isAfterLast()){
             Course course = new Course(cursor.getInt(0), cursor.getString(1));
             List<Lesson> lessons = new ArrayList<>();
-            Cursor curles = database.rawQuery( "SELECT _id, title, result, nsections FROM lesson WHERE courseid = " + Integer.toString(course.getCourseid()), null);
+            Cursor curles = database.rawQuery( "SELECT _id, title, result, nsections FROM lesson WHERE courseid = " + Integer.toString(course.getId()), null);
             curles.moveToFirst();
             while (!curles.isAfterLast()){
                 Lesson lesson = new Lesson(curles.getInt(0), curles.getString(1), curles.getInt(2),curles.getInt(3));
