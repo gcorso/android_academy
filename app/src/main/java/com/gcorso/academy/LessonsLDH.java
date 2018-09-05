@@ -29,7 +29,7 @@ import static com.gcorso.academy.Preferences.LEVELS;
 
 public class LessonsLDH {
 
-    private static final int DATABASE_VERSION = 41;
+    private static final int DATABASE_VERSION = 45;
     private static final String DATABASE_NAME = "lessons.db";
     private static final String TABLE_NAME_LESSONS = "lesson";
     private static final String TABLE_NAME_COURSES = "course";
