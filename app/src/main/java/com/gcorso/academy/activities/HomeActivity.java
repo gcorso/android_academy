@@ -89,6 +89,8 @@ public class HomeActivity extends AppCompatActivity {
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
+
+        /*
         //DUMP courses and lessons
         Log.d("", "COURSE DUMP");
 
@@ -122,7 +124,7 @@ public class HomeActivity extends AppCompatActivity {
             System.out.println("</course>");
 
         }
-
+*/
     }
 
 }
