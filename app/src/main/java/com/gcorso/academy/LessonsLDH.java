@@ -29,7 +29,7 @@ import static com.gcorso.academy.Preferences.LEVELS;
 
 public class LessonsLDH {
 
-    private static final int DATABASE_VERSION = 17;
+    private static final int DATABASE_VERSION = 24;
     private static final String DATABASE_NAME = "lessons.db";
     private static final String TABLE_NAME_LESSONS = "lesson";
     private static final String TABLE_NAME_COURSES = "course";
@@ -237,8 +237,14 @@ public class LessonsLDH {
         cursor.moveToFirst();
 
         for(int i = 0; i<6; i++){
-            percCourses[cursor.getInt(2)-1] = cursor.getInt(0) * 10 / cursor.getInt(1);
-            cursor.moveToNext();
+            try {
+                percCourses[cursor.getInt(2)-1] = cursor.getInt(0) * 10 / cursor.getInt(1);
+                cursor.moveToNext();
+            } catch (ArithmeticException e) {
+                /* ignore */
+                //TODO Don't use this kludge - fix this properly. Div by zero happens when trying
+                //to get the next question beyond the actual number of questions
+            }
         }
         cursor.close();
 
