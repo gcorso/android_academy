@@ -166,19 +166,19 @@ public class LessonsLDH {
         return list;
     }
 
-    public Section getSection(int lessonid, int sectionn){
-        String sql = "SELECT title, nsections, " + LESSON_COLUMN_SECTIONS[sectionn] + " FROM lesson WHERE _id = " + Integer.toString(lessonid);
+    public Section getSection(int lessonId, int sectionN){
+        String sql = "SELECT title, nsections, " + LESSON_COLUMN_SECTIONS[sectionN] + " FROM lesson WHERE _id = " + Integer.toString(lessonId);
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
 
-        String lessontitle = cursor.getString(0);
-        int lessonsections = cursor.getInt(1);
+        String lessonTitle = cursor.getString(0);
+        int lessonSections = cursor.getInt(1);
         String sec = cursor.getString(2);
         String title = sec.split("<<-->>")[0];
         String text = sec.split("<<-->>")[1];
         cursor.close();
 
-        return new Section(lessonid, sectionn, title, text, lessontitle, lessonsections);
+        return new Section(lessonId, sectionN, title, text, lessonTitle, lessonSections);
 
     }
 
@@ -207,26 +207,26 @@ public class LessonsLDH {
         String sql = "SELECT SUM(result), COUNT(nsections) FROM lesson";
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
-        int totq = cursor.getInt(0) * 5;
-        int total_points = cursor.getInt(1) * 50;
+        int totQ = cursor.getInt(0) * 5;
+        int totalPoints = cursor.getInt(1) * 50;
         cursor.close();
         int liv = 0;
         for(int i = LEVELS.length-1; i>=0; i--){
-            if(totq>= BOUNDARIES[i]){
+            if(totQ >= BOUNDARIES[i]){
                 liv = i;
                 break;
             }
         }
 
-        int prog = totq- BOUNDARIES[liv];
+        int prog = totQ - BOUNDARIES[liv];
         int tot;
         if(liv == LEVELS.length-1){
-            tot = total_points;
+            tot = totalPoints;
         } else {
             tot = BOUNDARIES[liv+1] - BOUNDARIES[liv];
         }
         int perc = prog*100/tot;
-        int[] perccourses = {0,0,0,0,0,0};
+        int[] percCourses = {0,0,0,0,0,0};
         String sql2 = "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 1 UNION " +
                 "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 2 UNION " +
                 "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 3 UNION " +
@@ -237,26 +237,26 @@ public class LessonsLDH {
         cursor.moveToFirst();
 
         for(int i = 0; i<6; i++){
-            perccourses[cursor.getInt(2)-1] = cursor.getInt(0) * 10 / cursor.getInt(1);
+            percCourses[cursor.getInt(2)-1] = cursor.getInt(0) * 10 / cursor.getInt(1);
             cursor.moveToNext();
         }
         cursor.close();
 
-        return new Level(perc, LEVELS[liv], prog, tot, perccourses);
+        return new Level(perc, LEVELS[liv], prog, tot, percCourses);
     }
 
-    public int updateResult(int lessonid, int nuovo){
+    public int updateResult(int lessonid, int newResult){
         String sql = "SELECT result FROM lesson WHERE _id = " + Integer.toString(lessonid);
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
 
-        int vecchio = cursor.getInt(0);
+        int oldResult = cursor.getInt(0);
         cursor.close();
 
-        if(nuovo > vecchio){
-            String update = "UPDATE lesson SET result = " + Integer.toString(nuovo) + " WHERE _id = " + Integer.toString(lessonid);
+        if(newResult > oldResult){
+            String update = "UPDATE lesson SET result = " + Integer.toString(newResult) + " WHERE _id = " + Integer.toString(lessonid);
             database.execSQL(update);
-            return nuovo-vecchio;
+            return newResult - oldResult;
         }
         return 0;
     }
