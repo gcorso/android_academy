@@ -8,6 +8,7 @@ Android Academy is a template for an Android educational app, it allows you to f
 
 The template can be used freely as a whole or in part, if you do use it, we would be delighted to know it and add the link to your app in the list below. Moreover, if you extend the functionalities and you think that other educational projects would benefit, please do share them with us and we will add them to the project. 
 
+Recent Italian-English translation work done by technojeeves.com.
 ## Table of Contents 
 
 1. [ Overview ](#overview) 
