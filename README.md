@@ -100,7 +100,7 @@ The color of each course can be changed in the `CoursesColors` array in the Pref
 
 <img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_profile.png">
 
-Now open your app on an Android device and all your courses should be working!
+The last thing you have to do is increment by one the database version in the LessonsLDH class. Remember this step whenever you modify the dataset. Now open your app on an Android device and all your courses should be working!
 
 
 ### Personalize the levels of the profile
