@@ -5,7 +5,7 @@ Android Academy is a template for an Android educational app, it allows you to f
 The goal of this project is to provide a tool for educators to create their learning platform without spending a lot of time and resources on them and without having to have a great knowledge of Android development.
 
 <p align="center">
-  <img width="900"  src="https://github.com/gcorso/android_academy/blob/master/images/show1.jpg">
+  <img width="900"  src="images/show1.jpg">
 </p>
 
 The template can be used freely as a whole or in part, if you do use it, we would be delighted to know it and add the link to your app in the list below. Moreover, if you extend the functionalities and you think that other educational projects would benefit, please do share them with us and we will add them to the project. 
@@ -88,8 +88,8 @@ In order for the app to work automatically, you will have to keep the same table
 
 #### Images
 
-<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_section.png">
-<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_explore.png">
+<img align="right" width="150" src="images/img_section.png">
+<img align="right" width="150" src="images/img_explore.png">
 
 As you can see from the screenshots of the template each lesson has an icon and each section a picture. These are all saved in the app drawable folder with the following conventions:
 
@@ -98,7 +98,7 @@ As you can see from the screenshots of the template each lesson has an icon and 
 
 The color of each course can be changed in the `CoursesColors` array in the Preferences.java file.
 
-<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_profile.png">
+<img align="right" width="150" src="images/img_profile.png">
 
 The last thing you have to do is increment by one the database version in the LessonsLDH class. Remember this step whenever you modify the dataset. Now open your app on an Android device and all your courses should be working!
 
@@ -110,7 +110,7 @@ The default division of the levels is beginner, amateur (from 100 points), exper
 The number, names and bounds of the levels can be changed in the Preferences.java file, where they are determined by two constant arrays: `LEVELS` defines the names and `BOUNDARIES` defines the score at which the user reaches that level. It is important that the arrays have the same size and that the score array is in ascending order (i.e. from the first to the last level).
 
 
-<img align="right" width="150" src="https://github.com/gcorso/android_academy/blob/master/images/img_tools.png">
+<img align="right" width="150" src="images/img_tools.png">
 
 ### Develop your tools
 
