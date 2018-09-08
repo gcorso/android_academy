@@ -5,7 +5,7 @@
  *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
  */
 
-package com.gcorso.academy.Activities;
+package com.gcorso.academy.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,20 +16,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.gcorso.academy.Adapters.CoursesProgGridAdapter;
-import com.gcorso.academy.LessonsLDH;
-import com.gcorso.academy.Objects.Course;
-import com.gcorso.academy.Layout.ExpandableHeightGridView;
-import com.gcorso.academy.Layout.FitDoughnut;
-import com.gcorso.academy.Objects.Level;
 import com.gcorso.academy.R;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ToolsActivity extends AppCompatActivity {
 
-public class ProfileActivity extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -40,30 +34,28 @@ public class ProfileActivity extends AppCompatActivity {
             switch (item.getItemId()) {
 
                 case R.id.navigation_explore:
-                    intent = new Intent(ProfileActivity.this, HomeActivity.class);
+                    intent = new Intent(ToolsActivity.this, HomeActivity.class);
                     startActivity(intent);
                     return true;
                 case R.id.navigation_chat:
-                    intent = new Intent(ProfileActivity.this, ChatActivity.class);
+                    intent = new Intent(ToolsActivity.this, ChatActivity.class);
                     startActivity(intent);
                     return true;
                 case R.id.navigation_tools:
-                    intent = new Intent(ProfileActivity.this, ToolsActivity.class);
-                    startActivity(intent);
                     return true;
                 case R.id.navigation_profile:
-
+                    intent = new Intent(ToolsActivity.this, ProfileActivity.class);
+                    startActivity(intent);
                     return true;
             }
             return false;
         }
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_tools);
 
         final ActionBar abar = getSupportActionBar();
         View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_titletext_layout, null);
@@ -72,40 +64,35 @@ public class ProfileActivity extends AppCompatActivity {
                 ActionBar.LayoutParams.MATCH_PARENT,
                 Gravity.CENTER);
         TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText("Profile");
+        textviewTitle.setText("Tools");
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(R.id.navigation_profile);
+        navigation.setSelectedItemId(R.id.navigation_tools);
 
-        LessonsLDH lessonsLDH = LessonsLDH.getInstance(this);
-        Level level = lessonsLDH.getLevel();
+        RelativeLayout item1 = findViewById(R.id.item1);
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // click on item 1
+            }
+        });
 
-        // set up the overall level
-        FitDoughnut doughnut = (FitDoughnut) findViewById(R.id.doughnuttot);
-        doughnut.animateSetPercent((float) level.getPerctot());
-        TextView tvperctot = findViewById(R.id.tvpercentage);
-        String p = Integer.toString(level.getPerctot())+ "%";
-        tvperctot.setText(p);
-        TextView tvLev = findViewById(R.id.tvlevel);
-        tvLev.setText(level.getLiv());
-        TextView tvProg = findViewById(R.id.tvprogress);
-        String prog = Integer.toString(level.getProg()) + " / " + Integer.toString(level.getTot());
-        tvProg.setText(prog);
-
-        ExpandableHeightGridView gridCourses = findViewById(R.id.gridCoursesProg);
-        List<Course> courses = new ArrayList<>();
-        List<String> coursesTitles = lessonsLDH.getCoursesNames();
-        for(int i = 0; i<coursesTitles.size(); i++){
-            courses.add(new Course(coursesTitles.get(i), level.getPerccourses()[i]));
-        }
-        CoursesProgGridAdapter coursesAdapter = new CoursesProgGridAdapter(courses);
-        gridCourses.setAdapter(coursesAdapter);
-        gridCourses.setExpanded(true);
-
-
+        RelativeLayout item2 = findViewById(R.id.item2);
+        item2.setOnClickListener(itemEmptyListener);
+        RelativeLayout item3 = findViewById(R.id.item3);
+        item3.setOnClickListener(itemEmptyListener);
+        RelativeLayout item4 = findViewById(R.id.item4);
+        item4.setOnClickListener(itemEmptyListener);
     }
+
+    View.OnClickListener itemEmptyListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(ToolsActivity.this, "Sorry, this tool is not available yet.", Toast.LENGTH_LONG).show();
+        }
+    };
 }

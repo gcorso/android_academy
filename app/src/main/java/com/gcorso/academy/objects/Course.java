@@ -1,20 +1,20 @@
-package com.gcorso.academy.Objects;
+package com.gcorso.academy.objects;
 
 import java.util.List;
 
 public class Course {
-    private int courseid;
+    private int id;
     private String title;
     private List<Lesson> lessons;
     private int percentageProgress;
 
-    public Course(int courseid, String title) {
-        this.courseid = courseid;
+    public Course(int id, String title) {
+        this.id = id;
         this.title = title;
     }
 
-    public Course(int courseid, String title, List<Lesson> lessons) {
-        this.courseid = courseid;
+    public Course(int id, String title, List<Lesson> lessons) {
+        this.id = id;
         this.title = title;
         this.lessons = lessons;
     }
@@ -24,12 +24,12 @@ public class Course {
         this.percentageProgress = percentageProgress;
     }
 
-    public int getCourseid() {
-        return courseid;
+    public int getId() {
+        return id;
     }
 
-    public void setCourseid(int courseid) {
-        this.courseid = courseid;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ProfileActivity">
+    tools:context=".activities.ProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
 
                 </LinearLayout>
 
-                <com.gcorso.academy.Layout.FitDoughnut
+                <com.gcorso.academy.layout.FitDoughnut
                     android:id="@+id/doughnuttot"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
@@ -96,7 +96,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"/>
 
-            <com.gcorso.academy.Layout.ExpandableHeightGridView
+            <com.gcorso.academy.layout.ExpandableHeightGridView
                 android:id="@+id/gridCoursesProg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

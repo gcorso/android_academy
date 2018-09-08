@@ -1,4 +1,4 @@
-package com.gcorso.academy.Objects;
+package com.gcorso.academy.objects;
 
 public class Level {
 

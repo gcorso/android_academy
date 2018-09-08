@@ -5,7 +5,7 @@
  *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
  */
 
-package com.gcorso.academy.Adapters;
+package com.gcorso.academy.adapters;
 
 import android.content.Context;
 import android.support.v17.leanback.widget.HorizontalGridView;
@@ -16,7 +16,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gcorso.academy.Objects.Course;
+import com.gcorso.academy.objects.Course;
 import com.gcorso.academy.R;
 
 import java.util.List;
@@ -65,7 +65,7 @@ public class CoursesListAdapter extends BaseAdapter {
             }
         });
 
-        LessonsHorizAdapter lessonsAdapter = new LessonsHorizAdapter(context, courses.get(position).getLessons(), courses.get(position).getCourseid());
+        LessonsHorizAdapter lessonsAdapter = new LessonsHorizAdapter(context, courses.get(position).getLessons(), courses.get(position).getId());
         HorizontalGridView lessonsView = view.findViewById(R.id.gridlessons);
         lessonsView.setAdapter(lessonsAdapter);
 

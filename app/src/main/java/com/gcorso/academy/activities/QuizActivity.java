@@ -5,7 +5,7 @@
  *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
  */
 
-package com.gcorso.academy.Activities;
+package com.gcorso.academy.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,8 +18,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.gcorso.academy.LessonsLDH;
-import com.gcorso.academy.Layout.FitDoughnut;
-import com.gcorso.academy.Objects.Level;
+import com.gcorso.academy.layout.FitDoughnut;
+import com.gcorso.academy.objects.Level;
 import com.gcorso.academy.Preferences;
 import com.gcorso.academy.R;
 

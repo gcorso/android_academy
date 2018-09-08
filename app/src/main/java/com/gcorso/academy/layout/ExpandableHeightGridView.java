@@ -5,7 +5,7 @@
  *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
  */
 
-package com.gcorso.academy.Layout;
+package com.gcorso.academy.layout;
 
 import android.content.Context;
 import android.util.AttributeSet;

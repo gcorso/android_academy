@@ -18,7 +18,7 @@
         android:paddingTop="8dp"
         app:srcCompat="@drawable/z3"/>
 
-    <com.gcorso.academy.Layout.FitDoughnut
+    <com.gcorso.academy.layout.FitDoughnut
         android:id="@+id/doughnutres"
         android:layout_width="25dp"
         android:layout_height="25dp"

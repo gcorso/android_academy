@@ -5,7 +5,7 @@
  *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
  */
 
-package com.gcorso.academy.Adapters;
+package com.gcorso.academy.adapters;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.gcorso.academy.Objects.Course;
-import com.gcorso.academy.Layout.FitDoughnut;
+import com.gcorso.academy.objects.Course;
+import com.gcorso.academy.layout.FitDoughnut;
 import com.gcorso.academy.R;
 
 import java.util.List;
