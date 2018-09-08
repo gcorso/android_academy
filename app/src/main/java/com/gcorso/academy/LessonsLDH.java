@@ -204,11 +204,12 @@ public class LessonsLDH {
     }
 
     public Level getLevel(){
-        String sql = "SELECT SUM(result), COUNT(nsections) FROM lesson";
+        String sql = "SELECT SUM(result), COUNT(nsections), COUNT(DISTINCT courseid) FROM lesson";
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
         int totQ = cursor.getInt(0) * 5;
         int totalPoints = cursor.getInt(1) * 50;
+        int nCourses = cursor.getInt(2);
         cursor.close();
         int liv = 0;
         for(int i = LEVELS.length-1; i>=0; i--){
@@ -226,25 +227,16 @@ public class LessonsLDH {
             tot = BOUNDARIES[liv+1] - BOUNDARIES[liv];
         }
         int perc = prog*100/tot;
-        int[] percCourses = {0,0,0,0,0,0};
-        String sql2 = "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 1 UNION " +
-                "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 2 UNION " +
-                "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 3 UNION " +
-                "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 4 UNION " +
-                "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 5 UNION " +
-                "SELECT SUM(result), COUNT(_id), courseid FROM lesson WHERE courseid = 6";
+
+        int[] percCourses = new int[nCourses];
+        String sql2 = "SELECT SUM(result), COUNT(_id) FROM lesson GROUP BY courseid ORDER BY courseid";
         cursor = database.rawQuery(sql2, null);
         cursor.moveToFirst();
-
-        for(int i = 0; i<6; i++){
-            try {
-                percCourses[cursor.getInt(2)-1] = cursor.getInt(0) * 10 / cursor.getInt(1);
-                cursor.moveToNext();
-            } catch (ArithmeticException e) {
-                /* ignore */
-                //TODO Don't use this kludge - fix this properly. Div by zero happens when trying
-                //to get the next question beyond the actual number of questions
-            }
+        int idx = 0;
+        while (!cursor.isAfterLast()){
+            percCourses[idx] = cursor.getInt(0) * 10 / cursor.getInt(1);
+            idx++;
+            cursor.moveToNext();
         }
         cursor.close();
 

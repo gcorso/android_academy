@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Goz Academy</string>
+    <string name="app_name">Android Academy</string>
 
-    <string name="title_activity_home">Goz Academy</string>
+    <string name="title_activity_home">Android Academy</string>
     <string name="title_home">Home</string>
     <string name="title_chat">Chat</string>
     <string name="title_tools">Tools</string>
