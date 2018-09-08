@@ -16,6 +16,7 @@ The template can be used freely as a whole or in part, if you do use it, we woul
 2. [ Getting Started ](#getting-started) 
 3. [ Future Extensions ](#future-extensions) 
 4. [ Apps ](#apps) 
+5. [ Contributors ](#contributors)
 
 ## Overview 
 
@@ -151,6 +152,12 @@ Here you can have a look at some of the apps that have used this template and ho
 
 * __Cyber Academy:__ become an expert in cybersecurity with interactive lessons and quizzes! The app also offers tools such as a password manager to keep all your passwords safely in one place.
 
+### Contributors:
+
+* [Gabriele Corso](https://github.com/gcorso)
+* [Charles Johnson](https://github.com/cehjohnson)
+* [Alessandro Corso](https://github.com/AleCorso)
+
 ### Contact
 
-If you have any question or you would like to contribute to the project, please contact me using GitHub services or [Linkedin](https://www.linkedin.com/in/gabriele-corso-5b87b3136/) messages.
+If you have any question or you would like to contribute to the project, please contact me using GitHub services or write an email at contact@gcappslab.com.
