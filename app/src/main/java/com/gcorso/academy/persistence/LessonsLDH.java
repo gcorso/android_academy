@@ -5,7 +5,7 @@
  *  file LICENSE or http://www.opensource.org/licenses/mit-license.php.
 */
 
-package com.gcorso.academy;
+package com.gcorso.academy.persistence;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -27,7 +27,7 @@ import java.util.List;
 import static com.gcorso.academy.Preferences.BOUNDARIES;
 import static com.gcorso.academy.Preferences.LEVELS;
 
-public class LessonsLDH {
+public class LessonsLDH extends Dao {
 
     private static final int DATABASE_VERSION = 55;
     private static final String DATABASE_NAME = "lessons.db";
@@ -73,8 +73,8 @@ public class LessonsLDH {
         }
         return instance;
     }
-
-    private void populateDatabase(Context context){
+    @Override
+    protected void populateDatabase(Context context){
         AssetManager assetManager = context.getAssets();
 
         InputStream input;
@@ -112,7 +112,8 @@ public class LessonsLDH {
         return db;
     }
 
-    public List<String> getCoursesNames(){
+    @Override
+    public List<String> getCourseNames(){
         openHelper.getWritableDatabase();
         Cursor cursor = database.rawQuery(
                 "SELECT " + COURSE_COLUMN_TITLE + " FROM " + TABLE_NAME_COURSES + " ORDER BY " + COURSE_COLUMN_ID,
@@ -133,6 +134,7 @@ public class LessonsLDH {
         return list;
     }
 
+    @Override
     public List<Course> getCourses(){
         openHelper.getWritableDatabase();
         Cursor cursor = database.rawQuery(
@@ -166,6 +168,7 @@ public class LessonsLDH {
         return list;
     }
 
+    @Override
     public Section getSection(int lessonId, int sectionN){
         String sql = "SELECT title, nsections, " + LESSON_COLUMN_SECTIONS[sectionN] + " FROM lesson WHERE _id = " + Integer.toString(lessonId);
         Cursor cursor = database.rawQuery(sql, null);
@@ -182,6 +185,7 @@ public class LessonsLDH {
 
     }
 
+    @Override
     public String getQuestion(int lessonid){
         String sql = "SELECT questions FROM lesson WHERE _id = " + Integer.toString(lessonid);
         Cursor cursor = database.rawQuery(sql, null);
@@ -193,6 +197,7 @@ public class LessonsLDH {
 
     }
 
+    @Override
     public String getLessonTitle(int lessonid){
         String sql = "SELECT title FROM lesson WHERE _id = " + Integer.toString(lessonid);
         Cursor cursor = database.rawQuery(sql, null);
@@ -203,6 +208,7 @@ public class LessonsLDH {
 
     }
 
+    @Override
     public Level getLevel(){
         String sql = "SELECT SUM(result), COUNT(nsections), COUNT(DISTINCT courseid) FROM lesson";
         Cursor cursor = database.rawQuery(sql, null);
@@ -243,6 +249,7 @@ public class LessonsLDH {
         return new Level(perc, LEVELS[liv], prog, tot, percCourses);
     }
 
+    @Override
     public int updateResult(int lessonid, int newResult){
         String sql = "SELECT result FROM lesson WHERE _id = " + Integer.toString(lessonid);
         Cursor cursor = database.rawQuery(sql, null);

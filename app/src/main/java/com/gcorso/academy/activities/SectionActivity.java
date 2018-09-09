@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gcorso.academy.LessonsLDH;
+import com.gcorso.academy.persistence.LessonsLDH;
 import com.gcorso.academy.objects.Section;
 import com.gcorso.academy.R;
 

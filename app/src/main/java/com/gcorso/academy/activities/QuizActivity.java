@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.gcorso.academy.LessonsLDH;
+import com.gcorso.academy.persistence.LessonsLDH;
 import com.gcorso.academy.layout.FitDoughnut;
 import com.gcorso.academy.objects.Level;
 import com.gcorso.academy.Preferences;

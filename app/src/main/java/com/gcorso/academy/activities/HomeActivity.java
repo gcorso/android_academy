@@ -13,7 +13,6 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,11 +20,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.gcorso.academy.adapters.CoursesListAdapter;
-import com.gcorso.academy.LessonsLDH;
+import com.gcorso.academy.persistence.LessonsLDH;
 import com.gcorso.academy.objects.Course;
 import com.gcorso.academy.R;
-import com.gcorso.academy.objects.Lesson;
-import com.gcorso.academy.objects.Section;
 
 import java.util.List;
 

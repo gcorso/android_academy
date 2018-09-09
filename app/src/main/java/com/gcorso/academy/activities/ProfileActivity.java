@@ -19,7 +19,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.gcorso.academy.adapters.CoursesProgGridAdapter;
-import com.gcorso.academy.LessonsLDH;
+import com.gcorso.academy.persistence.LessonsLDH;
 import com.gcorso.academy.objects.Course;
 import com.gcorso.academy.layout.ExpandableHeightGridView;
 import com.gcorso.academy.layout.FitDoughnut;
@@ -98,7 +98,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         ExpandableHeightGridView gridCourses = findViewById(R.id.gridCoursesProg);
         List<Course> courses = new ArrayList<>();
-        List<String> coursesTitles = lessonsLDH.getCoursesNames();
+        List<String> coursesTitles = lessonsLDH.getCourseNames();
         for(int i = 0; i<coursesTitles.size(); i++){
             courses.add(new Course(coursesTitles.get(i), level.getPerccourses()[i]));
         }
