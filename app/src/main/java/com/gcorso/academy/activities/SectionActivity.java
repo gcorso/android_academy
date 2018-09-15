@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gcorso.academy.persistence.LessonsLDH;
 import com.gcorso.academy.objects.Section;
@@ -41,6 +42,11 @@ public class SectionActivity extends AppCompatActivity {
         LessonsLDH lessonsLDH = LessonsLDH.getInstance(this);
         section = lessonsLDH.getSection(lessonid, sectionn);
 
+        if(section == null){
+            Toast.makeText(SectionActivity.this, "Problems while loading section "
+                    + Integer.toString(sectionn), Toast.LENGTH_LONG).show();
+        }
+
         pageTv = findViewById(R.id.page);
         navprecBt  = findViewById(R.id.navprec);
         navnextBt = findViewById(R.id.navnext);
@@ -55,7 +61,8 @@ public class SectionActivity extends AppCompatActivity {
                 "drawable", getPackageName()));
         sectiontextTv.setText(section.getText());
 
-        String page = section.getLessonTitle() + "  " + Integer.toString(sectionn+1) + "/" + Integer.toString(section.getLessonSections());
+        String page = section.getLessonTitle() + "  " + Integer.toString(sectionn+1)
+                + "/" + Integer.toString(section.getLessonSections());
         pageTv.setText(page);
 
         closeBt.setOnClickListener(new View.OnClickListener() {
@@ -72,10 +79,7 @@ public class SectionActivity extends AppCompatActivity {
             navprecBt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(SectionActivity.this, SectionActivity.class);
-                    intent.putExtra("sectionn", sectionn-1);
-                    intent.putExtra("lessonid", lessonid);
-                    startActivity(intent);
+                    changeSection(lessonid, sectionn-1);
                 }
             });
         }
@@ -83,17 +87,25 @@ public class SectionActivity extends AppCompatActivity {
         navnextBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sectionn<section.getLessonSections()-1){
-                    Intent intent = new Intent(SectionActivity.this, SectionActivity.class);
-                    intent.putExtra("sectionn", sectionn+1);
-                    intent.putExtra("lessonid", lessonid);
-                    startActivity(intent);
-                } else {
-                    Intent intent = new Intent(SectionActivity.this, QuizActivity.class);
-                    intent.putExtra("lessonid", lessonid);
-                    startActivity(intent);
-                }
+            if(sectionn<section.getLessonSections()-1){
+                changeSection(lessonid, sectionn+1);
+            } else {
+                startQuiz(lessonid);
+            }
             }
         });
+    }
+
+    void changeSection(int lessonid, int sectionn){
+        Intent intent = new Intent(SectionActivity.this, SectionActivity.class);
+        intent.putExtra("sectionn", sectionn);
+        intent.putExtra("lessonid", lessonid);
+        startActivity(intent);
+    }
+
+    void startQuiz(int lessonid){
+        Intent intent = new Intent(SectionActivity.this, QuizActivity.class);
+        intent.putExtra("lessonid", lessonid);
+        startActivity(intent);
     }
 }

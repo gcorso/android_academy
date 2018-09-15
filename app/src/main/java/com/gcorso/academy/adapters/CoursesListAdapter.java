@@ -14,10 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.gcorso.academy.objects.Course;
 import com.gcorso.academy.R;
+import com.gcorso.academy.objects.Course;
 
 import java.util.List;
 
@@ -57,13 +56,6 @@ public class CoursesListAdapter extends BaseAdapter {
 
         TextView tvCourseTitle = view.findViewById(R.id.course_title);
         tvCourseTitle.setText(courses.get(position).getTitle());
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "Click course", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         LessonsHorizAdapter lessonsAdapter = new LessonsHorizAdapter(context, courses.get(position).getLessons(), courses.get(position).getId());
         HorizontalGridView lessonsView = view.findViewById(R.id.gridlessons);

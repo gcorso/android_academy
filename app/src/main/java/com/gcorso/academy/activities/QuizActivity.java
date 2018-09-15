@@ -53,7 +53,7 @@ public class QuizActivity extends AppCompatActivity {
         lessonid = intent.getIntExtra("lessonid", 0);
 
         lessonsLDH = LessonsLDH.getInstance(this);
-        String q = lessonsLDH.getQuestion(lessonid);
+        String q = lessonsLDH.getQuestions(lessonid);
         lessontitle = lessonsLDH.getLessonTitle(lessonid);
 
         questions = q.split(Q_SEP);

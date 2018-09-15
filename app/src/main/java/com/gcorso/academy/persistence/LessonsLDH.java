@@ -29,7 +29,7 @@ import static com.gcorso.academy.Preferences.LEVELS;
 
 public class LessonsLDH extends Dao {
 
-    private static final int DATABASE_VERSION = 55;
+    private static final int DATABASE_VERSION = 56;
     private static final String DATABASE_NAME = "lessons.db";
     private static final String TABLE_NAME_LESSONS = "lesson";
     private static final String TABLE_NAME_COURSES = "course";
@@ -174,27 +174,38 @@ public class LessonsLDH extends Dao {
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
 
-        String lessonTitle = cursor.getString(0);
-        int lessonSections = cursor.getInt(1);
-        String sec = cursor.getString(2);
-        String title = sec.split("<<-->>")[0];
-        String text = sec.split("<<-->>")[1];
-        cursor.close();
+        if(!cursor.isAfterLast()){
+            String lessonTitle = cursor.getString(0);
+            int lessonSections = cursor.getInt(1);
+            String sec = cursor.getString(2);
+            String title = sec.split("<<-->>")[0];
+            String text = sec.split("<<-->>")[1];
 
-        return new Section(lessonId, sectionN, title, text, lessonTitle, lessonSections);
+            cursor.close();
 
+            return new Section(lessonId, sectionN, title, text, lessonTitle, lessonSections);
+        } else {
+            Log.e("Section missing", "No results when executing " + sql);
+            cursor.close();
+            return null;
+        }
     }
 
     @Override
-    public String getQuestion(int lessonid){
+    public String getQuestions(int lessonid){
         String sql = "SELECT questions FROM lesson WHERE _id = " + Integer.toString(lessonid);
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
 
-        String questions = cursor.getString(0);
-        cursor.close();
-        return questions;
-
+        if(!cursor.isAfterLast()){
+            String questions = cursor.getString(0);
+            cursor.close();
+            return questions;
+        } else {
+            Log.e("Questions missing", "No results when executing " + sql);
+            cursor.close();
+            return "";
+        }
     }
 
     @Override
@@ -202,10 +213,16 @@ public class LessonsLDH extends Dao {
         String sql = "SELECT title FROM lesson WHERE _id = " + Integer.toString(lessonid);
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
-        String title = cursor.getString(0);
-        cursor.close();
-        return title;
 
+        if(!cursor.isAfterLast()) {
+            String title = cursor.getString(0);
+            cursor.close();
+            return title;
+        } else {
+            Log.e("Lesson missing", "No results when executing " + sql);
+            cursor.close();
+            return "";
+        }
     }
 
     @Override
@@ -213,6 +230,13 @@ public class LessonsLDH extends Dao {
         String sql = "SELECT SUM(result), COUNT(nsections), COUNT(DISTINCT courseid) FROM lesson";
         Cursor cursor = database.rawQuery(sql, null);
         cursor.moveToFirst();
+
+        if(cursor.isAfterLast()){
+            Log.e("Results missing", "No results when executing " + sql);
+            cursor.close();
+            return null;
+        }
+
         int totQ = cursor.getInt(0) * 5;
         int totalPoints = cursor.getInt(1) * 50;
         int nCourses = cursor.getInt(2);
