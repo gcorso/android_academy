@@ -158,4 +158,4 @@ Here you can have a look at some of the apps that have used this template and ho
 
 ### Contact
 
-If you have any question or you would like to contribute to the project, please contact me using GitHub services or write an email at contact@gcappslab.com.
+If you have any question or you would like to contribute to the project, please contact me using GitHub services or write an email at gcappslab@gmail.com.
